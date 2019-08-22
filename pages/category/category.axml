@@ -1,0 +1,33 @@
+<view class="container">
+<!-- 滚动内容区 -->
+  <view class="main">
+    <!-- 左侧菜单start -->
+    <scroll-view scroll-y="true" class='leftmenu'>
+      <block a:for='{{ categoryList}}'>
+        <view class='menu-item {{selIndex==index?"active":""}} ' data-index="{{index}}" data-id="{{item.categoryId}}" onTap='onMenuTab'>
+          {{item.categoryName}}
+        </view>
+      </block>
+    </scroll-view>
+    <!-- 左侧菜单end -->
+
+    <!-- 右侧内容start -->
+    <view class="rightcontent">
+      <view class="adImg">
+        <image mode="scaleToFill" src="../../image/classAd.png"/>
+      </view>
+      <view class="contentAll">
+        <view class="contentNew">
+          <image mode="scaleToFill" src="../../image/test01.png"/>
+          <view class="newTitle">全新</view>
+        </view>
+        <view class="contentOld">
+          <image mode="scaleToFill" src="../../image/test01.png"/>
+          <view class="newTitle">非全新</view>
+        </view>
+      </view>
+    </view>
+    <!-- 右侧内容end -->
+  </view>
+
+</view>

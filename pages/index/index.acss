@@ -1,0 +1,242 @@
+.page{
+  background-color: #FFFFFF;
+}
+
+.swiper-item{
+    display: block;
+    width:750rpx;
+    height: 365rpx;
+}
+
+.search{
+	display: flex;
+  	flex-direction: row;
+  	height: 50rpx;
+	align-items: center;
+  margin-top: 10rpx;
+}
+
+.search .scan{
+	display: flex;
+  	flex-direction: column;
+	align-items: center;
+	width: 2%;
+}
+
+.search .search-input{
+	padding: 5rpx;
+	background-color: #FFFFFF;
+	display: flex;
+	flex-direction: row;
+	height: 100%;
+	width: 96%;
+	-moz-border-radius: 50rpx;
+  -webkit-border-radius: 50rpx;
+  border-radius:50rpx;
+	align-items: center;
+  border: 2rpx solid #e6e6e6;
+}
+
+.search-icon{
+	width: 30rpx;
+	height: 30rpx;
+}
+
+.search-text{
+	top:0px;
+	padding:0px;
+	left: 0rpx;
+	right: 0rpx;
+}
+
+.allScroll {
+  width: 100%; 
+  display: flex; 
+  flex-direction: column; 
+  margin-top:10rpx
+}
+
+.lbtSwiper {
+  width:100%;
+  height:365rpx;
+}
+
+.xs_icon {
+  width: 22rpx; 
+  height:22rpx;
+}
+
+.xs_icon image {
+  width: 100%;
+  height: 100%;
+}
+
+.widgets-img{
+	width: 40rpx;
+	height: 40rpx;
+}
+
+.widgets-title{
+	color: #888888;
+    font-size: 1px;
+}
+
+.big-logo{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+.logoinfo{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width:150rpx; 
+	height: 150rpx;
+  margin-top: 20rpx; 
+}
+
+.logotext{
+	font-size: 22rpx;
+  margin-top: 15rpx;
+}
+
+.page-margin{
+	margin-left: 10rpx;
+	margin-right: 10rpx;
+	margin-top: 20rpx;
+}
+
+.page-column{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+/* tab组件 */
+.container {
+  height: 1000rpx;
+  /* min-height: 1000rpx;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box; */
+}
+
+.title {
+  width: 100%;
+  height: 88rpx;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.titleSel {
+  font-size: 32rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.titleUnsel {
+  color: #858fab;
+  font-size: #858fab;
+}
+
+.headerLineSel {
+  background: black;
+  height: 6rpx;
+  width: 50rpx;
+  position: relative;
+  margin-top: 10rpx;
+}
+
+.headerLineUnsel {
+  background: #fff;
+  height: 6rpx;
+  width: 40rpx;
+  position: relative;
+  margin-top: 10rpx;
+}
+
+.swiperAll {
+  width: 100%;
+  height: 100%!important;
+}
+
+.swiperAll image{
+  width:350rpx;
+  height:200rpx;
+}
+
+.swiper {
+  width: 100%;
+  flex: 1;
+  overflow: scroll;
+  display: flex;
+  flex-wrap:wrap;
+}
+
+.recordItem {
+  margin-top: 10rpx;
+  background-color: white;
+  padding-bottom: 20rpx;
+  padding-top: 20rpx;
+}
+
+.recordIteming{
+  height: 350rpx;
+  width: 340rpx;
+  margin: 13rpx;
+  border-color: transparent;
+  box-shadow: rgb(215, 215, 215) 0px 0px 4px 0px;
+  border-radius: 7px;
+  font-size: 30rpx;
+  background-color: #FFFFFF;
+}
+
+.recordIteming_content{
+  padding: 10rpx;
+}
+
+.limitTime .moveTransverse {
+  width:100%; 
+  margin-top:10rpx;
+  white-space: nowrap;
+}
+
+.limitTime .content {
+  display: inline-block;
+}
+
+.limitTime .contentEvery {
+  padding:10rpx;
+  width: 200rpx;
+  height: 250rpx;
+}
+
+.limitTime .goodsImg {
+  width:100%;
+  height:70%;
+  border:2rpx solid #e6e6e6;
+}
+
+.limitTime .goodsTitle {
+  width: 100%;
+  display: flex;
+  font-size: 22rpx;
+  margin-top: 10rpx;
+}
+
+.limitTime .goodsTitleText {
+  overflow: hidden;
+	text-overflow:ellipsis;
+	white-space: nowrap;
+  width: 100%;
+}
+
+.limitTime .goodsTitleIcon {
+  width: 50rpx;
+  height: 25rpx;
+  margin-right: 5rpx;
+}
