@@ -11,28 +11,30 @@
         <view class="goodsEvery">
           <view class="title">
             <view class="titleLeft">
-              <view class="titleChoose">
-                <image mode="scaleToFill" src="../../image/unselected.png"/>
+              <view class="titleChoose" onTap="selectGoods" data-index="{{index}}">
+                <image a:if="{{!item.select}}" mode="scaleToFill" src="../../image/unselected.png"/>
+                <image a:if="{{item.select}}" mode="scaleToFill" src="../../image/selected.png"/>
               </view>
-              <view class="titleText">盛氏集团有限公司</view>
+              <view class="titleText">{{item.company}}</view>
             </view>
             <view class="titleRight">
               <image mode="scaleToFill" src="../../image/delete.png"/>
             </view>
           </view>
           <view class="content">
-            <view class="contentChoose">
-              <image mode="scaleToFill" src="../../image/unselected.png"/>
+            <view class="contentChoose" onTap="selectGoods" data-index="{{index}}">
+              <image a:if="{{!item.select}}" mode="scaleToFill" src="../../image/unselected.png"/>
+              <image a:if="{{item.select}}" mode="scaleToFill" src="../../image/selected.png"/>
             </view>
             <view class="contentImg">
               <image mode="scaleToFill" src="../../image/test03.png"/>
             </view>
             <view class="contentText">
               <view class="contentTitle">
-                苹果（ios10）布拉布拉布拉w文字文字文字...
+                {{item.title}}
               </view>
               <view class="contentDes">
-                i5系列各种狠有了它代码没有一点bug5杀超神不是梦各种牛逼各种狠...
+                {{item.dec}}
               </view>
             </view>
           </view>
@@ -54,11 +56,13 @@
         </view>
       </block>
     </view>
+    <view class="nothing-tips">————————我是有底线的————————</view>
   </scroll-view>
   <view class="foot">
     <view class="footLeft">
-      <view class="allChoose">
-        <image mode="scaleToFill" src="../../image/unselected.png"/>
+      <view class="allChoose" onTap="selectAll">
+        <image a:if="{{!selectAllCheck}}" mode="scaleToFill" src="../../image/unselected.png"/>
+        <image a:if="{{selectAllCheck}}" mode="scaleToFill" src="../../image/selected.png"/>
       </view>
       <view class="selectAll">
         全选

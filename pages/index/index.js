@@ -1,11 +1,5 @@
 Page({
     data: {
-        background: ['green', 'red', 'yellow'],
-        indicatorDots: true,
-        vertical: false,
-        autoplay: true,
-        interval: 3000,
-        duration: 1200,
         swipers:[{
             image:"/image/swiper.png"
         },{
@@ -73,6 +67,18 @@ Page({
       currentIndex: 0,
       "firstList": [{
         img:'/image/test03.png',
+        title: 'ThinkPaid的测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字',
+        price: '￥6.67/天起'
+      },{
+        img:'/image/test03.png',
+        title: 'ThinkPaid的测试文字测试文字..',
+        price: '￥6.67/天起'
+      },{
+        img:'/image/test03.png',
+        title: 'ThinkPaid的测试文字测试文字..',
+        price: '￥6.67/天起'
+      },{
+        img:'/image/test03.png',
         title: 'ThinkPaid的测试文字测试文字..',
         price: '￥6.67/天起'
       },{
@@ -101,16 +107,6 @@ Page({
         price: '￥6.67/天起'
       }]
     },
-    changeIndicatorDots: function (e) {
-        this.setData({
-            indicatorDots: !this.data.indicatorDots
-        })
-    },
-    changeVertical: function (e) {
-        this.setData({
-            vertical: !this.data.vertical
-        })
-    },
   //swiper切换时会调用
   pagechange: function (e) {
     if ("touch" === e.detail.source) {
@@ -121,10 +117,13 @@ Page({
   },
   //用户点击tab时调用
   titleClick: function (e) {
-    let currentPageIndex =
       this.setData({
         //拿到当前索引并动态改变
         currentIndex: e.currentTarget.dataset.idx
       })
+  },
+  // 搜索
+  topSearch(e) {
+
   }
 })
