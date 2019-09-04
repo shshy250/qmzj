@@ -1,0 +1,23 @@
+<view class="order">
+  <tabs
+    tabs="{{tabs}}"
+    showPlus="{{false}}"
+    onTabClick="handleTabClick"
+    onChange="handleTabChange"
+    activeTab="{{activeTab}}"
+  >
+    <block a:for="{{tabs}}">
+      <tab-content key="{{index}}">
+        <view class="tab-content">
+          <view class="nothing">
+            <image mode="scaleToFill" src="../../image/nothing.png"/>
+            <view class="nothing-title">
+              目前暂无订单
+            </view>
+            <view class="toShopping">去选好物</view>
+          </view>
+        </view>
+      </tab-content>
+    </block>
+  </tabs>
+</view>

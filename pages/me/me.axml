@@ -27,7 +27,7 @@
 
   <view class="middle">
     <view class="middle-up">
-      <view class="orderAll">
+      <view class="orderAll" onTap="toOrder">
         <view class="control-m-Img">
           <image mode="scaleToFill" src="../../image/orderAll.png"/>
         </view>

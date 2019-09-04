@@ -1,0 +1,23 @@
+<view class="evaluate">
+  <view class="top">
+    <view class="top-left">
+      <view class="rightTitle">满意率</view>
+      <view class="rightContent">{{evaluate.ratio}}</view>
+      <view class="rightRatio">%</view>
+    </view>
+  </view>
+  <view class="middle">
+    <block a:for="{{evaluate.evaluateList}}">
+        <view class="every">
+          <view class="userMes">
+            <view class="userHeader">
+              <image mode="scaleToFill" src="{{item.userHeader}}"/>
+            </view>
+            <view class="userName">{{item.userName}}</view>
+          </view>
+          <view class="evaluate-content">{{item.content}}</view>
+          <view class="evaluate-goods">{{item.goods}}</view>
+        </view>
+      </block>
+  </view>
+</view>

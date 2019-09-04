@@ -18,7 +18,7 @@
               <view class="titleText">{{item.company}}</view>
             </view>
             <view class="titleRight">
-              <image mode="scaleToFill" src="../../image/delete.png"/>
+              <am-icon type="delete" size="3px" />
             </view>
           </view>
           <view class="content">

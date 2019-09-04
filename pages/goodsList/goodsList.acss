@@ -1,0 +1,107 @@
+.top {
+  width: 100%;
+  height: 5vh;
+}
+
+.top-popover {
+  width: 130rpx;
+  margin-left: 50rpx;
+  height: 100%;
+  line-height: 5vh;
+}
+
+.top-popover-btn image {
+  margin-left: 5rpx;
+  width: 15rpx;
+  height: 15rpx;
+}
+
+.am-popover-mask { /*蒙版背景色为空，以便于点击别处气泡消失*/
+  background-color: transparent!important;
+}
+
+.poItems {
+  
+}
+
+.middle {
+  width: 100%;
+  height: 95vh;
+} 
+
+.scroll {
+  width: 93%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
+.scroll-content {
+  padding: 15rpx 20rpx;
+  margin-top: 32rpx;
+  background-color: #fff;
+  width: 42%;
+}
+
+.scroll-content image {
+  width: 100%;
+  height: 340rpx;
+}
+
+.goodsTitle {
+  width: 100%;
+  height: 70rpx;
+  overflow: hidden;
+  font-size: 30rpx;
+}
+
+.goods-middle {
+  margin-top: 5rpx;
+  font-size: 25rpx;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.price {
+  color: red;
+}
+
+.condition {
+  color: darkgrey;
+}
+
+.goods-bottom {
+  margin-top: 5rpx;
+  font-size: 16rpx;
+  width: 100%;
+  display: flex;
+}
+
+.tip1 {
+  border: 1rpx solid red;
+  border-radius: 10rpx;
+  color: red;
+  height: 25rpx;
+  line-height: 25rpx;
+}
+
+.tip2 {
+  margin-left: 8rpx;
+  border: 1rpx solid greenyellow;
+  border-radius: 10rpx;
+  color: greenyellow;
+  height: 25rpx;
+  line-height: 25rpx;
+}
+
+.bottomTips {
+  font-size: 30rpx;
+  width: 100%;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  color: darkgray;
+}

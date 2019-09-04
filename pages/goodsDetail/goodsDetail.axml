@@ -1,0 +1,341 @@
+<view class="goodsDetail">
+  <view class="goodsTop">
+    <swiper class="top-swiper" onChange="swiperChange">
+        <block a:for="{{goodsImgList}}">
+          <swiper-item key="swiper-item-{{index}}">
+            <view class="swiper-content">
+              <image mode="aspectFit" src="{{item.src}}"/>
+            </view>
+          </swiper-item>
+        </block>
+    </swiper>
+    <view class="outside-swiperPosition">
+      <view class="swiperPosition">
+        {{current}}/5
+      </view>
+    </view>
+    <view class="goodsPrice">
+      <view class="price-title">￥</view>
+      <view class="price-content">135/月</view>
+      <view class="goods-class">非全新</view>
+    </view>
+    <view class="goods-title">ThinkPaid的测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字</view>
+    <view class="goods-dec">i5系列/16G内存/1T混合蚊子蚊子蚊子文字文字</view>
+  </view>
+
+  <view class="goodsCheck">
+    <list>
+				<list-item arrow="{{typeArrow}}" onClick="onItemClick">
+					已 选
+					<view slot="extra">
+						A8/64G/9.7寸/深灰/WIFI
+					</view>
+				</list-item>
+        <list-item arrow="{{modeArrow}}" onClick="popupTypeClick">
+					租赁方式
+					<view slot="extra">
+						请选择租赁方式
+					</view>
+				</list-item>
+        <list-item arrow="{{priceArrow}}" onClick="onItemClick">
+					商品押金
+					<view slot="extra">
+						￥45000.0
+					</view>
+				</list-item>
+		</list>
+  </view>
+
+  <view class="AD">
+    <view class="circleBg"></view>
+    <view class="ad-top">
+      <view class="ad-top-content">
+        <image mode="scaleToFill" src="{{company.logo}}"/>
+        <view class="companyName">{{company.name}}</view>
+      </view>
+    </view>
+    <view class="ad-middle">
+      在销售{{company.saleNum}}件
+    </view>
+    <view class="ad-bottom">
+      <view class="btn-left">二次确认</view>
+      <view class="btn-right">售后细则</view>
+    </view>
+  </view>
+
+  <view class="evaluate">
+    <view class="evaluate-top">
+      <view class="topLeft">评价({{evaluate.num}})</view>
+      <view class="topRight" onTap="toEvaluateDetail">
+        <view class="rightTitle">满意率</view>
+        <view class="rightContent">{{evaluate.ratio}}</view>
+        <view class="rightRatio">%</view>
+        <am-icon class="rightIcon" type="arrow-right" size="2px" />
+      </view>
+    </view>
+    <view class="evaluate-middle">
+      <block a:for="{{evaluate.evaluateList}}">
+        <view class="every">
+          <view class="userMes">
+            <view class="userHeader">
+              <image mode="scaleToFill" src="{{item.userHeader}}"/>
+            </view>
+            <view class="userName">{{item.userName}}</view>
+          </view>
+          <view class="evaluate-content">{{item.content}}</view>
+          <view class="evaluate-goods">{{item.goods}}</view>
+        </view>
+      </block>
+    </view>
+    <view class="evaluate-bottom" onTap="toEvaluateDetail">
+      <view>查看全部评价</view>
+      <am-icon type="arrow-right" size="2px" color="rgb(16, 142, 233)" />
+    </view>
+  </view>
+
+  <view class="goods-bottom">
+    <tabs
+      tabs="{{tabs}}"
+      showPlus="{{false}}"
+      onTabClick="handleTabClick"
+      onChange="handleTabChange"
+      activeTab="{{activeTab}}"
+    >
+      <tab-content key="0">
+          <view class="tab-content">
+            <scroll-view class="tab-scroll">
+              <!-- <block a:for="{{goodsDecImgList}}">
+              <image class="goodsDecImg" mode="widthFix" src="{{item.src}}"/>
+            </block> -->
+            </scroll-view>
+          </view>
+      </tab-content>
+      <tab-content key="1">
+          <view class="tab-content">
+            <view class="param-bg">
+              <view class="cpu">
+                <view class="cpu-title">CPU：</view>
+                <view class="cpu-param">I5 3320M</view>
+              </view>
+              <view class="memory">
+                <view class="memory-title">内存：</view>
+                <view class="memory-param">8G</view>
+              </view>
+              <view class="hdd">
+                <view class="hdd-title">硬盘：</view>
+                <view class="hdd-param">240G SSD</view>
+              </view>
+              <view class="gpu">
+                <view class="gpu-title">显卡：</view>
+                <view class="gpu-param">HD4000</view>
+              </view>
+              <view class="size">
+                <view class="size-title">屏幕尺寸：</view>
+                <view class="size-param">14英寸</view>
+              </view>
+            </view>
+          </view>
+      </tab-content>
+      <tab-content key="2">
+          <view class="tab-content">
+            <view class="process">
+              <image class="process-content" mode="scaleToFill" src="../../image/freeCharge.png"/>
+              <image class="processIcon" mode="scaleToFill" src="../../image/process.png"/>
+              <image class="process-content" mode="scaleToFill" src="../../image/chooseGoods.png"/>
+              <image class="processIcon" mode="scaleToFill" src="../../image/process.png"/>
+              <image class="process-content" mode="scaleToFill" src="../../image/contract.png"/>
+              <image class="processIcon" mode="scaleToFill" src="../../image/process.png"/>
+              <image class="process-content" mode="scaleToFill" src="../../image/receivingGoods.png"/>
+            </view>
+            <view class="process-name">
+              <view class="process-name-content">申请免押</view>
+              <view class="process-name-none"></view>
+              <view class="process-name-content">选购产品</view>
+              <view class="process-name-none"></view>
+              <view class="process-name-content">签订合同</view>
+              <view class="process-name-none"></view>
+              <view class="process-name-content">收货起租</view>
+            </view>
+          </view>
+      </tab-content>
+      <tab-content key="3">
+          <view class="tab-content">
+            <scroll-view scroll-y="true" class="tab-scroll">
+              <view class="tab-scroll-top">
+                本产品由阿里巴巴集团有限公司提供产品和售后服务
+              </view>
+              <view class="tab-scroll-middle">
+                <view class="tab-scroll-middle-every">
+                  <view class="tab-scroll-title">
+                    <image mode="scaleToFill" src="../../image/blueHeart.png"/>
+                    <view>{{mustKnow[0].title}}</view>
+                  </view>
+                  <text>{{mustKnow[0].content}}</text><text class="text-onTap">《全民租机用户协议》</text><text class="text-onTap">《上海利租网络科技有限公司租赁合同》</text><text>若您不同意，请立即停止下单，并退出</text>
+                </view>
+                <view class="tab-scroll-middle-every">
+                  <view class="tab-scroll-title">
+                    <image mode="scaleToFill" src="../../image/blueHeart.png"/>
+                    <view>{{mustKnow[1].title}}</view>
+                  </view>
+                  <text>{{mustKnow[1].content}}</text>
+                </view>
+                <view class="tab-scroll-middle-every">
+                  <view class="tab-scroll-title">
+                    <image mode="scaleToFill" src="../../image/blueHeart.png"/>
+                    <view>{{mustKnow[2].title}}</view>
+                  </view>
+                  <text>{{mustKnow[2].content}}</text>
+                </view>
+                <view class="tab-scroll-middle-every">
+                  <view class="tab-scroll-title">
+                    <image mode="scaleToFill" src="../../image/blueHeart.png"/>
+                    <view>{{mustKnow[3].title}}</view>
+                  </view>
+                  <text>{{mustKnow[3].content1}}</text>
+                  <text class="color-red">{{mustKnow[3].content2}}</text>
+                </view>
+                <view class="tab-scroll-middle-every">
+                  <view class="tab-scroll-title">
+                    <image mode="scaleToFill" src="../../image/blueHeart.png"/>
+                    <view>{{mustKnow[4].title}}</view>
+                  </view>
+                  <text>{{mustKnow[4].content1}}</text>
+                  <image class="signNote" mode="widthFix" src="../../image/signNote.png"/>  
+                  <text>2.	签收后的商品</text><text class="font-weight">{{mustKnow[4].content2}}</text><text>{{mustKnow[4].content3}}</text>
+                </view>
+                <view class="tab-scroll-middle-every">
+                  <view class="tab-scroll-title">
+                    <image mode="scaleToFill" src="../../image/blueHeart.png"/>
+                    <view>{{mustKnow[5].title}}</view>
+                  </view>
+                  <text>{{mustKnow[5].content}}</text>
+                </view>
+                <view class="tab-scroll-middle-every">
+                  <view class="tab-scroll-title">
+                    <image mode="scaleToFill" src="../../image/blueHeart.png"/>
+                    <view>{{mustKnow[6].title}}</view>
+                  </view>
+                  <text>{{mustKnow[6].content}}</text>
+                </view>
+                <view class="tab-scroll-middle-every">
+                  <view class="tab-scroll-title">
+                    <image mode="scaleToFill" src="../../image/blueHeart.png"/>
+                    <view>{{mustKnow[7].title}}</view>
+                  </view>
+                  <text>{{mustKnow[7].content}}</text>
+                </view>
+              </view>
+            </scroll-view>
+          </view>
+      </tab-content>
+    </tabs>
+  </view>
+
+  <view class="page-bottom">
+    <image mode="scaleToFill" src="../../image/service.png"/>
+    <image mode="scaleToFill" src="../../image/toCart.png"/>
+    <view class="popupClick" onTap="popupPriceClick">
+      <view class="fstPay">
+        <view class="fstPayTitle">首次支付</view>
+        <view class="fstPayPrice">￥0.00</view>
+      </view>
+      <am-icon a:if="{{!showPricePopup}}" type="arrow-up" size="3px" />
+      <am-icon a:if="{{showPricePopup}}" type="arrow-down" size="3px" />
+    </view>
+    <view class="bottom-option">
+      <view class="cart">加入购物车</view>
+      <view class="buy">立即租赁</view>
+    </view>
+  </view>
+
+  <view class="pageBottom-pop">
+    <popup show="{{showPricePopup}}" position="bottom" onClose="popupPriceClick">
+      <view class="popup-content">
+        <view class="goods-prices">
+          <view class="prices-left">月租金</view>
+          <view class="prices-right">￥195.00</view>
+        </view>
+        <view class="goods-prices">
+          <view class="prices-left">首付月数</view>
+          <view class="prices-right">1</view>
+        </view>
+        <view class="goods-prices">
+          <view class="prices-left">押金</view>
+          <view class="prices-right">￥2808.00</view>
+        </view>
+        <view class="goods-prices">
+          <view class="prices-left">信用免押</view>
+          <view class="prices-right">0.00</view>
+        </view>
+      </view>
+    </popup>
+  </view>
+
+  <popup show="{{showTypePopup}}" position="bottom" onClose="popupTypeClick" disableScroll="{{false}}">
+    <view class="popup-type-content">
+      <scroll-view scroll-y="true" class="popTypeScroll">
+        <view class="pop-top">
+          <view class="pop-top-left">
+            <image mode="scaleToFill" src="../../image/test04.png"/>
+            <view class="pop-top-content">
+              <view class="pop-top-content-top">
+                <view class="pop-top-content-top-left">
+                  ￥135/月
+                </view>
+                <view class="pop-top-content-top-right">
+                  12期
+                </view>
+              </view>
+              <view class="pop-top-content-bottom">
+                商品编号：3265421
+              </view>
+            </view>
+          </view>
+          <view  onTap="popupTypeClick" >
+            <am-icon type="close" size="30" color="#e6e6e6" />
+          </view>
+          
+        </view>
+        <view class="typeSelect">
+          <view class="typeSelect-title">选择配置</view>
+        </view>
+        <view class="typeSelect-content">
+          <block a:for="{{typeList}}">
+            <view class="typeSelect-every">{{item}}</view>
+          </block>
+        </view>
+        <view class="timeSelect">
+          <view class="timeSelect-title">选择时长</view>
+        </view>
+        <view class="timeSelect-content">
+          <block a:for="{{timeList}}">
+            <view class="timeSelect-every">{{item}}</view>
+          </block>
+        </view>
+        <view class="custom">
+          <view class="custom-title">自定义租期</view>
+        </view>
+        <view class="custom-content" a:if="{{!showCalendar}}" onTap="changeShowCalendar">
+          按日历选择
+        </view>
+        <view class="custom-date" a:if="{{showCalendar}}">
+          <calendar
+            type="range"
+            onSelect="handleDateSelect" />
+        </view>
+        <view class="custom-tips">
+          <am-icon type="warning-o" size="8" color="rgb(16, 142, 233)" />
+          <view class="tips-content">起租时间从收费日期次日起计算</view>
+        </view>
+        <view class="number">
+          <view class="number-title">租赁数量</view>
+          <view class="number-select">
+            <view class="number-delete" onTap="reduceBtn">—</view>
+            <view class="number-content">{{leaseNum}}</view>
+            <view class="number-add" onTap="addBtn">+</view>
+          </view>
+        </view>
+      </scroll-view>
+    </view>
+  </popup>
+</view>

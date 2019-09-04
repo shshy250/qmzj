@@ -1,0 +1,46 @@
+<view class="page">
+  <view class="top">
+    <view class="top-popover">
+      <popover
+        position="{{position}}"
+        show="{{popoverShow}}"
+        showMask="{{showMask}}"
+        onMaskClick="onMaskClick"
+      >
+        <view class="top-popover-btn" onTap="onShowPopoverTap">综合<image mode="scaleToFill" src="../../image/triangle.png"/></view>
+        <view slot="items" class="poItems">
+          <popover-item onItemClick="itemTap1">
+            <text>综合</text>
+          </popover-item>
+          <popover-item onItemClick="itemTap2">
+            <text>{{leaseTerm}}</text>
+          </popover-item>
+          <popover-item onItemClick="itemTap3">
+            <text>{{price}}</text>
+          </popover-item>
+        </view>
+      </popover>
+    </view>
+
+  </view>
+
+  <view class="middle">
+    <scroll-view class="scroll" scroll-y="{{true}}" scroll-top="{{100}}">
+      <block a:for="{{goodsList}}">
+        <view class="scroll-content">
+          <image mode="aspectFill" src="{{item.img}}"/>
+          <view class="goodsTitle">{{item.title}}</view>
+          <view class="goods-middle">
+            <view class="price">{{item.price}}</view>
+            <view class="condition">{{item.condition}}</view>
+          </view>
+          <view class="goods-bottom">
+            <view class="tip1">非全新</view>
+            <view class="tip2">租完即送</view>
+          </view>
+        </view>
+      </block>
+      <view class="bottomTips">亲没有更多了哦！</view>
+    </scroll-view>
+  </view>
+</view>

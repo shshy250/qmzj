@@ -5,7 +5,7 @@
 
       </view>
       <view class="search-input">
-        <image class="search-icon" src="../../image/ath.png" mode="aspectFit" />
+        <am-icon type="search" size="2px" />
         <input class="serach-text" type="text" placeholder="搜索商品" confirm-type="search" onConfirm = "topSearch"/>
       </view>
       <view class="scan">
@@ -25,8 +25,8 @@
 
     <view class="big-logo">
       <block a:for="{{logos}}">
-        <view class="logoinfo">
-          <image style="width:100rpx; height: 100rpx;" src="{{item.image}}" mode="aspectFit" />
+        <view class="logoinfo" onTap="classClick" data-type="{{item.title}}">
+          <image src="{{item.image}}" mode="aspectFit" />
           <text class="logotext">{{item.title}}</text>
         </view>
       </block>
@@ -38,16 +38,16 @@
           <view class="xs_titleText">限时抢租</view>
         </view>
         <view class="xs_icon">
-          <image src="/image/arrowright.png" mode="aspectFill" />
+          <am-icon type="arrow-right" size="3px" />
         </view>
       </view>
       <scroll-view class="moveTransverse" scroll-x="true">
         <block a:for="{{quicks}}">
-          <view class="content">
+          <view class="content" onTap="toGoodsDetail">
             <view class="page-column contentEvery">
               <image class="goodsImg" src="{{item.image}}" mode="aspectFill" />
               <view class="goodsTitle">
-                <image class="goodsTitleIcon" mode="scaleToFill" src="/image/qzTitle.png"/>
+                <image class="goodsTitleIcon" mode="aspectFit" src="/image/qzTitle.png"/>
                 <view class="goodsTitleText">Tink Pad t45x1笔记本牛逼牛逼牛逼</view>
               </view>
               <view style="font-size:20rpx;color:#FF0000; margin-top:10rpx;">{{item.price}}</view>
@@ -87,7 +87,7 @@
       <swiper class='swiperAll' onChange='pagechange' current='{{currentIndex}}'>
         <swiper-item class='swiper'>
             <block a:for="{{firstList}}">
-              <view class="recordIteming">
+              <view class="recordIteming" onTap="toGoodsDetail">
                 <view class="recordIteming_content">
                   <image src="{{item.img}}" mode="aspectFill" />
                   <view class="tj_title">{{item.title}}</view> <!-- 太多的文字获取时设置字数截取加... -->
@@ -98,7 +98,7 @@
         </swiper-item>
         <swiper-item class='swiper'>
           <block a:for="{{firstList}}">
-              <view class="recordIteming">
+              <view class="recordIteming" onTap="toGoodsDetail">
                 <view class="recordIteming_content">
                   <image src="{{item.img}}" mode="aspectFill" />
                   <view class="tj_title">{{item.title}}</view> <!-- 太多的文字获取时设置字数截取加... -->
@@ -109,7 +109,7 @@
         </swiper-item>
         <swiper-item class='swiper'>
           <block a:for="{{firstList}}">
-              <view class="recordIteming">
+              <view class="recordIteming" onTap="toGoodsDetail">
                 <view class="recordIteming_content">
                   <image src="{{item.img}}" mode="aspectFill" />
                   <view class="tj_title">{{item.title}}</view> <!-- 太多的文字获取时设置字数截取加... -->
@@ -120,7 +120,7 @@
         </swiper-item>
         <swiper-item class='swiper'>
           <block a:for="{{firstList}}">
-              <view class="recordIteming">
+              <view class="recordIteming" onTap="toGoodsDetail">
                 <view class="recordIteming_content">
                   <image src="{{item.img}}" mode="aspectFill" />
                   <view class="tj_title">{{item.title}}</view> <!-- 太多的文字获取时设置字数截取加... -->

@@ -84,11 +84,6 @@
   width: 30rpx;
   height: 30rpx;
 }
-
-.titleRight image {
-  width: 100%;
-  height: 100%;
-}
 /* 内容 */
 .content {
   width: 100%;

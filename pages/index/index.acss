@@ -44,11 +44,6 @@
   border: 2rpx solid #e6e6e6;
 }
 
-.search-icon{
-	width: 30rpx;
-	height: 30rpx;
-}
-
 .search-text{
 	top:0px;
 	padding:0px;
@@ -90,16 +85,6 @@
   margin-right: 5rpx;
 }
 
-.xs_icon {
-  width: 22rpx; 
-  height:22rpx;
-}
-
-.xs_icon image {
-  width: 100%;
-  height: 100%;
-}
-
 .widgets-img{
 	width: 40rpx;
 	height: 40rpx;
@@ -124,6 +109,11 @@
 	width:150rpx; 
 	height: 150rpx;
   margin-top: 20rpx; 
+}
+
+.logoinfo image {
+  width:100rpx; 
+  height: 100rpx;
 }
 
 .logotext{

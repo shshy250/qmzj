@@ -3,12 +3,16 @@
     "pages/index/index",
     "pages/cart/cart",
     "pages/category/category",
-    "pages/me/me"
+    "pages/me/me",
+    "pages/goodsList/goodsList",
+    "pages/goodsDetail/goodsDetail",
+    "pages/evaluate/evaluate",
+    "pages/order/order"
   ],
   "window": {
     "defaultTitle": "全民租机",
     "gestureBack": "YES",
-    "allowsBounceVertical":"NO"
+    "allowsBounceVertical": "NO"
   },
   "tabBar": {
     "textColor": "#dddddd",
