@@ -138,5 +138,10 @@ Page({
     my.navigateTo({
         url: '/pages/goodsDetail/goodsDetail'
       })
+  },
+  toStaps(){
+    my.navigateTo({
+        url: '/pages/logistics/logistics'
+      })
   }
 })

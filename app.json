@@ -7,7 +7,11 @@
     "pages/goodsList/goodsList",
     "pages/goodsDetail/goodsDetail",
     "pages/evaluate/evaluate",
-    "pages/order/order"
+    "pages/order/order",
+    "pages/search/search",
+    "pages/store/store",
+    "pages/logistics/logistics",
+    "pages/orderDetail/orderDetail"
   ],
   "window": {
     "defaultTitle": "全民租机",

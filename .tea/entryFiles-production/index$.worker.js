@@ -35,6 +35,8 @@ require('../../node_modules/mini-antui/es/tabs/index');
 require('../../node_modules/mini-antui/es/tabs/tab-content/index');
 require('../../node_modules/mini-antui/es/popup/index');
 require('../../node_modules/mini-antui/es/calendar/index');
+require('../../node_modules/mini-antui/es/search-bar/index');
+require('../../node_modules/mini-antui/es/steps/index');
 require('../../pages/index/index');
 require('../../pages/cart/cart');
 require('../../pages/category/category');
@@ -43,6 +45,9 @@ require('../../pages/goodsList/goodsList');
 require('../../pages/goodsDetail/goodsDetail');
 require('../../pages/evaluate/evaluate');
 require('../../pages/order/order');
+require('../../pages/search/search');
+require('../../pages/store/store');
+require('../../pages/logistics/logistics');
 }
 self.bootstrapApp ? self.bootstrapApp({ success }) : success();
 }

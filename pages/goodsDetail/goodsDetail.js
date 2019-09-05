@@ -139,5 +139,10 @@ Page({
     this.setData({
       showCalendar: true
     })
+  },
+  toStore() {
+    my.navigateTo({
+      url: '/pages/store/store'
+    });
   }
 });

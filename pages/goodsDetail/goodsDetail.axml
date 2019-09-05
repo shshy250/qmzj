@@ -55,11 +55,15 @@
       </view>
     </view>
     <view class="ad-middle">
-      在销售{{company.saleNum}}件
+      <view class="ad-middle-content">
+        <image mode="scaleToFill" src="../../image/position.png"/>
+        <view class="companyAddress">湖南省 长沙市</view>
+      </view>
     </view>
     <view class="ad-bottom">
       <view class="btn-left">二次确认</view>
-      <view class="btn-right">售后细则</view>
+      <view class="btn-middle">售后细则</view>
+      <view class="btn-right" onTap="toStore">查看店铺</view>
     </view>
   </view>
 

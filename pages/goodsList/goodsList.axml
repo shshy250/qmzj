@@ -25,7 +25,7 @@
   </view>
 
   <view class="middle">
-    <scroll-view class="scroll" scroll-y="{{true}}" scroll-top="{{100}}">
+    <scroll-view class="scroll" scroll-y="{{true}}">
       <block a:for="{{goodsList}}">
         <view class="scroll-content">
           <image mode="aspectFill" src="{{item.img}}"/>

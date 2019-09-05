@@ -121,7 +121,7 @@
   height: 30rpx;
   width: 450rpx;
   z-index: 2;
-  margin: 40rpx 0 0 150rpx;
+  margin: 40rpx 0 0 160rpx;
   position: relative;
   background: linear-gradient(to right, #eeeeee , #fff , #eeeeee); /* 渐变 */
 }
@@ -147,21 +147,35 @@
   height: 30rpx;
   margin-top: 40rpx;
   width: 100%;
-  text-align: center;
-  font-size: 30rpx;
+  font-size: 20rpx;
+  color: #737373;
+}
+
+.ad-middle image {
+  width: 20rpx;
+  height: 20rpx;
+  margin: auto 0;
+}
+
+.ad-middle-content {
+  display: flex;
+  justify-content: center;
+}
+
+.companyAddress {
+  margin-left: 5rpx;
   line-height: 30rpx;
-  color: rgb(16, 142, 233);
 }
 
 .ad-bottom {
-  width: 260rpx;
+  width: 300rpx;
   margin-top: 50rpx;
   height: 30rpx;
   line-height: 30rpx;
   display: flex;
   color: rgb(16, 142, 233);
   justify-content: space-around;
-  margin-left: 245rpx;
+  margin-left: 230rpx;
   font-size: 16rpx;
   background: linear-gradient(to right, #f6f6f6 , #fff , #f6f6f6); /* 渐变 */
   z-index: 5;
@@ -169,15 +183,25 @@
 }
 
 .btn-left {
+  padding: 0 5rpx;
+  text-align: center;
+  border: 1rpx solid rgb(16, 142, 233);
+  border-radius: 10rpx;
+}
+
+.btn-middle {
+  padding: 0 5rpx;
   text-align: center;
   border: 1rpx solid rgb(16, 142, 233);
   border-radius: 10rpx;
 }
 
 .btn-right {
+  padding: 0 5rpx;
   text-align: center;
-  border: 1rpx solid rgb(16, 142, 233);
   border-radius: 10rpx;
+  color: #fff;
+  background-color: #ff7800;
 }
 
 .evaluate {

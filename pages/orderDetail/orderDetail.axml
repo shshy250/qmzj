@@ -1,0 +1,50 @@
+<view class="orderDetail">
+  <view class="pageTopTips">
+    卖家发货后，需要买家确认收货后才能收到钱款
+  </view>
+  <view class="process">
+    <view a:if="{{step1}}" class="stepEvery">
+      <image mode="scaleToFill" src=""/>
+      <view class="stepTitle">已租赁</view>
+    </view>
+    <view a:if="{{!step1}}" class="stepEvery">
+      <image mode="scaleToFill" src=""/>
+      <view class="stepTitle">待租赁</view>
+    </view>
+    <view a:if="{{step2}}" class="stepEvery">
+      <image mode="scaleToFill" src=""/>
+      <view class="stepTitle">已付款</view>
+    </view>
+    <view a:if="{{!step2}}" class="stepEvery">
+      <image mode="scaleToFill" src=""/>
+      <view class="stepTitle">待付款</view>
+    </view>
+    <view a:if="{{step3}}" class="stepEvery">
+      <image mode="scaleToFill" src=""/>
+      <view class="stepTitle">已发货</view>
+    </view>
+    <view a:if="{{!step3}}" class="stepEvery">
+      <image mode="scaleToFill" src=""/>
+      <view class="stepTitle">待发货</view>
+    </view>
+    <view a:if="{{step4}}" class="stepEvery">
+      <image mode="scaleToFill" src=""/>
+      <view class="stepTitle">已收货</view>
+    </view>
+    <view a:if="{{!step4}}" class="stepEvery">
+      <image mode="scaleToFill" src=""/>
+      <view class="stepTitle">待收货</view>
+    </view>
+  </view>
+  <view class="stepMes">
+    <view class="stepMes-content">
+      卖家已发货，待买家确认收货
+    </view>
+    <view class="stepMes-tips">
+      2天14小时30分钟<text class="color-grey">后将自动确认收货</text>
+    </view>
+  </view>
+  <view class="logistics-Mes">
+    
+  </view>
+</view>
