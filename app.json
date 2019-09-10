@@ -11,7 +11,9 @@
     "pages/search/search",
     "pages/store/store",
     "pages/logistics/logistics",
-    "pages/orderDetail/orderDetail"
+    "pages/orderDetail/orderDetail",
+    "pages/categoryList/categoryList",
+    "pages/afterSale/afterSale"
   ],
   "window": {
     "defaultTitle": "全民租机",

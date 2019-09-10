@@ -62,7 +62,7 @@
     </view>
     <view class="ad-bottom">
       <view class="btn-left">二次确认</view>
-      <view class="btn-middle">售后细则</view>
+      <view class="btn-middle" onTap="toAfterSale">售后细则</view>
       <view class="btn-right" onTap="toStore">查看店铺</view>
     </view>
   </view>

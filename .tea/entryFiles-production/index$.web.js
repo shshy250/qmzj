@@ -25,3 +25,6 @@ require('../../pages/order/order');
 require('../../pages/search/search');
 require('../../pages/store/store');
 require('../../pages/logistics/logistics');
+require('../../pages/orderDetail/orderDetail');
+require('../../pages/categoryList/categoryList');
+require('../../pages/afterSale/afterSale');

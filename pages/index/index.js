@@ -122,16 +122,18 @@ Page({
         currentIndex: e.currentTarget.dataset.idx
       })
   },
-  // 搜索
-  topSearch(e) {
-
-  },
   // 分类点击事件
   classClick(e) {
     let type = e.currentTarget.dataset.type
-    my.navigateTo({
-        url: '/pages/goodsList/goodsList?type='+ type
+    if(type === '更多') {
+      my.navigateTo({
+        url: '/pages/category/category'
       })
+    }else {
+      my.navigateTo({
+          url: '/pages/goodsList/goodsList?type='+ type
+        })
+    }
   },
   // 跳转商品详情
   toGoodsDetail(e) {
@@ -142,6 +144,11 @@ Page({
   toStaps(){
     my.navigateTo({
         url: '/pages/logistics/logistics'
+      })
+  },
+  toSearch() {
+    my.navigateTo({
+        url: '/pages/search/search'
       })
   }
 })

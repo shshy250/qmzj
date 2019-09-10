@@ -23,6 +23,13 @@
   margin-top: 10rpx;
 }
 
+.serach-text {
+  width: 100%;
+  height: 100%;
+  color: #737373;
+  line-height: 50rpx;
+}
+
 .search .scan{
 	display: flex;
   	flex-direction: column;
@@ -199,10 +206,10 @@
 
 .swiper {
   width: 100%;
-  flex: 1;
   overflow: scroll;
   display: flex;
   flex-wrap:wrap;
+  justify-content: space-around;
 }
 
 .recordItem {

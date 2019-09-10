@@ -24,7 +24,21 @@ Page({
   },
   doCopy() {
     my.setClipboard({
-      text: this.data.transportCode,
+      text: this.data.orderCode,
+      success: () => {
+        my.showToast({
+          type: 'none',
+          content: '复制成功',
+          duration: 1500
+        });
+      },
+      fail: () => {
+        my.showToast({
+          type: 'none',
+          content: '复制失败',
+          duration: 1500
+        });
+      }
     });
   }
 });

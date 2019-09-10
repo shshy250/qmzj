@@ -6,7 +6,7 @@
       </view>
       <view class="search-input">
         <am-icon type="search" size="2px" />
-        <input class="serach-text" type="text" placeholder="搜索商品" confirm-type="search" onConfirm = "topSearch"/>
+        <view class="serach-text" onTap="toSearch">搜索商品</view>
       </view>
       <view class="scan">
 

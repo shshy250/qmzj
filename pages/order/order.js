@@ -48,5 +48,10 @@ Page({
     this.setData({
       activeTab: index,
     });
+  },
+  toOrderDetail() {
+    my.navigateTo({
+      url: '/pages/orderDetail/orderDetail'
+    });
   }
 });

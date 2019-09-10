@@ -104,6 +104,7 @@ Page({
   },
   popupPriceClick() { // 显示/关闭 弹窗
     this.setData({
+      showTypePopup: false,
       showPricePopup: !this.data.showPricePopup
     })
   },
@@ -143,6 +144,11 @@ Page({
   toStore() {
     my.navigateTo({
       url: '/pages/store/store'
+    });
+  },
+  toAfterSale() {
+    my.navigateTo({
+      url: '/pages/afterSale/afterSale'
     });
   }
 });

@@ -16,7 +16,7 @@
             <view class="nothing-title">
               目前暂无订单
             </view>
-            <view class="toShopping">去选好物</view>
+            <view class="toShopping" onTap="toOrderDetail">去选好物</view>
           </view>
         </view>
       </tab-content>

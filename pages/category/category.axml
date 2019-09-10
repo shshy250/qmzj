@@ -17,11 +17,11 @@
         <image mode="scaleToFill" src="../../image/classAd.png"/>
       </view>
       <view class="contentAll">
-        <view class="contentNew">
+        <view class="contentNew" onTap="toList">
           <image mode="scaleToFill" src="../../image/test01.png"/>
           <view class="newTitle">全新</view>
         </view>
-        <view class="contentOld">
+        <view class="contentOld" onTap="toList">
           <image mode="scaleToFill" src="../../image/test01.png"/>
           <view class="newTitle">非全新</view>
         </view>

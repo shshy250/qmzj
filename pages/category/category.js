@@ -36,6 +36,11 @@ Page({
   getProdList(categoryId) {
     //加载分类列表
     
+  },
+  toList(type) {
+    my.navigateTo({
+      url: '/pages/categoryList/categoryList'
+    });
   }
 
 });

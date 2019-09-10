@@ -16,6 +16,7 @@
             <view class="userName">{{item.userName}}</view>
           </view>
           <view class="evaluate-content">{{item.content}}</view>
+          <image class="evaluate-img" mode="aspectFill" src="{{item.img}}"/>
           <view class="evaluate-goods">{{item.goods}}</view>
         </view>
       </block>
