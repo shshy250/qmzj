@@ -25,53 +25,58 @@
     </view>
   </view>
 
+  <view class="toAddress" onTap="toAddress">
+    <view>收货地址</view>
+    <am-icon type="arrow-right" size='10' />
+  </view>
+
   <view class="middle">
     <view class="middle-up">
-      <view class="orderAll" onTap="toOrder">
+      <view class="orderAll" data-status="0" onTap="toOrder">
         <view class="control-m-Img">
           <image mode="scaleToFill" src="../../image/orderAll.png"/>
         </view>
         <view class="orderAllName">全部订单</view>
       </view>
-      <view class="waitCollection">
+      <view class="waitCollection" data-status="1" onTap="toOrder">
         <view class="control-m-Img">
           <image mode="scaleToFill" src="../../image/waitCollection.png"/>
         </view>
         <view class="waitCollectionName">待收款</view>
       </view>
-      <view class="waitSend">
+      <view class="waitSend" data-status="2" onTap="toOrder">
         <view class="control-m-Img">
           <image mode="scaleToFill" src="../../image/waitSend.png"/>
         </view>
         <view class="waitSendName">待发货</view>
       </view>
-      <view class="waitReceive">
+      <view class="waitReceive" data-status="3" onTap="toOrder">
         <view class="control-m-Img">
           <image mode="scaleToFill" src="../../image/waitReceive.png"/>
         </view>
         <view class="waitReceiveName">待收货</view>
       </view>
     </view>
-    <view class="middle-down">
+    <view class="middle-down" data-status="4" onTap="toOrder">
       <view class="using">
         <view class="control-m-Img">
           <image mode="scaleToFill" src="../../image/using.png"/>
         </view>
         <view class="usingName">使用中</view>
       </view>
-      <view class="successed">
+      <view class="successed" data-status="5" onTap="toOrder">
         <view class="control-m-Img">
           <image mode="scaleToFill" src="../../image/successed.png"/>
         </view>
         <view class="successedName">已完成</view>
       </view>
-      <view class="overdue">
+      <view class="overdue" data-status="6" onTap="toOrder">
         <view class="control-m-Img">
           <image mode="scaleToFill" src="../../image/overdue.png"/>
         </view>
         <view class="overdueName">已逾期</view>
       </view>
-      <view class="returnGoods">
+      <view class="returnGoods" data-status="7" onTap="toOrder">
         <view class="control-m-Img">
           <image mode="scaleToFill" src="../../image/returnGoods.png"/>
         </view>
@@ -80,8 +85,30 @@
     </view>
   </view>
 
-  <view class="me-ad">
+  <view class="me-step">
+    <view class="step-top">
+      <view class="step-top-left">
+        最新物流
+      </view>
+      <view class="step-top-time">
+        08:35
+      </view>
+    </view>
+    <view class="step-content">
+      <image mode="scaleToFill" src="../../image/test01.png"/>
+      <view class="step-content-right">
+        <view class="step-content-top">【{{status}}】</view>
+        <view class="step-content-bottom">郑州运输中心发往北京，测试文字测试文字测试文字</view>
+      </view>
+    </view>
+  </view>
+
+  <view class="me-ad" onTap="openCamera">
     <image mode="scaleToFill" src="../../image/me_AD.png"/>
+  </view>
+
+  <view class="photo">
+    <image mode="scaleToFill" src="{{photoUrl}}"/>
   </view>
 
   <view class="bottom">

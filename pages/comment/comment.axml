@@ -1,0 +1,1 @@
+<web-view src="http://39.98.58.41:8081/comment" onMessage="onmessage"></web-view>

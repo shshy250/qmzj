@@ -4,7 +4,7 @@ Page({
     step2: true,
     step3: true,
     step4: false,
-    orderCode: 12345678998
+    orderCode: '12345678998'
   },
   onLoad() {
 

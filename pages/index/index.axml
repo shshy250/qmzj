@@ -17,7 +17,7 @@
       <swiper class="lbtSwiper" indicator-dots="{{true}}" autoplay="{{true}}" interval="{{3000}}" duration="{{1200}}" previous-margin="12px" next-margin="5px" circular="{{true}}">
         <block a:for="{{swipers}}">
           <swiper-item key="swiper-item-{{index}}">
-            <image onTap="toStaps" class="swiper-item" src="{{item.image}}" mode="aspectFill" />
+            <image class="swiper-item" src="{{item.image}}" mode="aspectFill" />
           </swiper-item>
         </block>
       </swiper>

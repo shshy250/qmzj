@@ -31,6 +31,12 @@
 						A8/64G/9.7寸/深灰/WIFI
 					</view>
 				</list-item>
+        <list-item arrow="{{typeArrow}}" onClick="popupCouponClick">
+					优惠券
+					<view className="coupon" slot="extra">
+						满1999减1毛嘿嘿
+					</view>
+				</list-item>
         <list-item arrow="{{modeArrow}}" onClick="popupTypeClick">
 					租赁方式
 					<view slot="extra">
@@ -44,6 +50,52 @@
 					</view>
 				</list-item>
 		</list>
+  </view>
+
+  <view class="explain-all">
+    <view class="explain-top-title">
+      租赁流程
+    </view>
+    <image class="explain-top-content" mode="widthFix" src="../../image/explainProcess.png"/>
+    <view class="explain-every" data-idx="1" onTap="explainClick">
+      <view class="explain-left">
+        <view class="explain-left-top">
+          免押额度
+        </view>
+        <view class="explain-left-bottom">
+          免押额度说明
+        </view>
+      </view>
+      <am-icon size="10" a:if="{{showExplainContent1}}" type="arrow-up" />
+      <am-icon size="10" a:if="{{!showExplainContent1}}" type="arrow-down" />
+    </view>
+    <image a:if="{{showExplainContent1}}" class="every-content" mode="widthFix" src="../../image/myed.png"/>
+    <view class="explain-every" data-idx="2" onTap="explainClick">
+      <view class="explain-left">
+        <view class="explain-left-top">
+          续租
+        </view>
+        <view class="explain-left-bottom">
+          随时续租，支持买断
+        </view>
+      </view>
+      <am-icon size="10" a:if="{{showExplainContent2}}" type="arrow-up" />
+      <am-icon size="10" a:if="{{!showExplainContent2}}" type="arrow-down" />
+    </view>
+    <image a:if="{{showExplainContent2}}" class="every-content" mode="widthFix" src="../../image/xz.png"/>
+    <view class="explain-every" data-idx="3" onTap="explainClick">
+      <view class="explain-left">
+        <view class="explain-left-top">
+          买断
+        </view>
+        <view class="explain-left-bottom">
+          支持买断尾款终生拥有
+        </view>
+      </view>
+      <am-icon size="10" a:if="{{showExplainContent3}}" type="arrow-up" />
+      <am-icon size="10" a:if="{{!showExplainContent3}}" type="arrow-down" />
+    </view>
+    <image a:if="{{showExplainContent3}}" class="every-content" mode="widthFix" src="../../image/md.png"/>
   </view>
 
   <view class="AD">
@@ -61,39 +113,7 @@
       </view>
     </view>
     <view class="ad-bottom">
-      <view class="btn-left">二次确认</view>
-      <view class="btn-middle" onTap="toAfterSale">售后细则</view>
       <view class="btn-right" onTap="toStore">查看店铺</view>
-    </view>
-  </view>
-
-  <view class="evaluate">
-    <view class="evaluate-top">
-      <view class="topLeft">评价({{evaluate.num}})</view>
-      <view class="topRight" onTap="toEvaluateDetail">
-        <view class="rightTitle">满意率</view>
-        <view class="rightContent">{{evaluate.ratio}}</view>
-        <view class="rightRatio">%</view>
-        <am-icon class="rightIcon" type="arrow-right" size="2px" />
-      </view>
-    </view>
-    <view class="evaluate-middle">
-      <block a:for="{{evaluate.evaluateList}}">
-        <view class="every">
-          <view class="userMes">
-            <view class="userHeader">
-              <image mode="scaleToFill" src="{{item.userHeader}}"/>
-            </view>
-            <view class="userName">{{item.userName}}</view>
-          </view>
-          <view class="evaluate-content">{{item.content}}</view>
-          <view class="evaluate-goods">{{item.goods}}</view>
-        </view>
-      </block>
-    </view>
-    <view class="evaluate-bottom" onTap="toEvaluateDetail">
-      <view>查看全部评价</view>
-      <am-icon type="arrow-right" size="2px" color="rgb(16, 142, 233)" />
     </view>
   </view>
 
@@ -142,23 +162,34 @@
       </tab-content>
       <tab-content key="2">
           <view class="tab-content">
-            <view class="process">
-              <image class="process-content" mode="scaleToFill" src="../../image/freeCharge.png"/>
-              <image class="processIcon" mode="scaleToFill" src="../../image/process.png"/>
-              <image class="process-content" mode="scaleToFill" src="../../image/chooseGoods.png"/>
-              <image class="processIcon" mode="scaleToFill" src="../../image/process.png"/>
-              <image class="process-content" mode="scaleToFill" src="../../image/contract.png"/>
-              <image class="processIcon" mode="scaleToFill" src="../../image/process.png"/>
-              <image class="process-content" mode="scaleToFill" src="../../image/receivingGoods.png"/>
-            </view>
-            <view class="process-name">
-              <view class="process-name-content">申请免押</view>
-              <view class="process-name-none"></view>
-              <view class="process-name-content">选购产品</view>
-              <view class="process-name-none"></view>
-              <view class="process-name-content">签订合同</view>
-              <view class="process-name-none"></view>
-              <view class="process-name-content">收货起租</view>
+            <view class="evaluate">
+              <view class="evaluate-top">
+                <view class="topLeft">评价({{evaluate.num}})</view>
+                <view class="topRight" onTap="toEvaluateDetail">
+                  <view class="rightTitle">满意率</view>
+                  <view class="rightContent">{{evaluate.ratio}}</view>
+                  <view class="rightRatio">%</view>
+                  <am-icon class="rightIcon" type="arrow-right" size="2px" />
+                </view>
+              </view>
+              <view class="evaluate-middle">
+                <block a:for="{{evaluate.evaluateList}}">
+                  <view class="every">
+                    <view class="userMes">
+                      <view class="userHeader">
+                        <image mode="scaleToFill" src="{{item.userHeader}}"/>
+                      </view>
+                      <view class="userName">{{item.userName}}</view>
+                    </view>
+                    <view class="evaluate-content">{{item.content}}</view>
+                    <view class="evaluate-goods">{{item.goods}}</view>
+                  </view>
+                </block>
+              </view>
+              <view class="evaluate-bottom" onTap="toEvaluateDetail">
+                <view>查看全部评价</view>
+                <am-icon type="arrow-right" size="2px" color="rgb(16, 142, 233)" />
+              </view>
             </view>
           </view>
       </tab-content>
@@ -339,6 +370,49 @@
             <view class="number-add" onTap="addBtn">+</view>
           </view>
         </view>
+      </scroll-view>
+    </view>
+  </popup>
+
+  <popup show="{{showCouponPopup}}" position="bottom" onClose="popupCouponClick" disableScroll="{{false}}">
+    <view class="popup-type-content">
+      <view class="pop-top">
+          <view class="pop-coupon-top-left">
+            优惠券领取
+          </view>
+          <view onTap="popupCouponClick" >
+            <am-icon type="close" size="30" color="#e6e6e6" />
+          </view>
+      </view>
+      <view class="coupon-top-bottom">
+        <view class="coupon-top-bottom-left">
+          可领取优惠券
+        </view>
+        <view class="coupon-top-bottom-right">
+          <view>更多</view>
+          <am-icon type="arrow-right" size="7" />
+        </view>
+      </view>
+      <scroll-view scroll-y="true" class="popCouponScroll">
+        <block a:for="{{couponList}}">
+          <view class="coupon-every">
+            <view class="coupon-left">
+              <view class="coupon-left-top">
+                ￥<text class="coupon-left-top-money">{{item.money}}</text>
+              </view>
+              <view class="coupon-left-bottom">
+                满1999减120
+              </view>
+            </view>
+            <view class="coupon-middle">
+              <view class="coupon-middle-top">平台券</view>
+              <view class="coupon-middle-bottom">满1999立减120</view>
+            </view>
+            <view class="coupon-right">
+              立即领券
+            </view>
+          </view>
+        </block>
       </scroll-view>
     </view>
   </popup>

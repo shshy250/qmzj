@@ -26,6 +26,7 @@
 }
 
 .balance {
+  margin-top: 10rpx;
   font-size: 25rpx;
   color: #737373;
 }
@@ -54,6 +55,18 @@
   font-size: 25rpx;
   color: #737373;
 }
+
+/*收货地址*/
+.toAddress {
+  color: #737373;
+  padding: 10rpx 20rpx;
+  background-color: #fff;
+  font-size: 25rpx;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20rpx;
+}
+
 
 /* 中间 start */
 .middle {
@@ -111,6 +124,56 @@
   height: 100%;
   text-align: center;
   padding-top: 5rpx;
+}
+
+/*物流信息*/
+.me-step {
+  margin-top: 20rpx;
+  width: calc(100% - 40rpx);
+  padding: 10rpx 20rpx;
+  background-color: #fff;
+  font-size: 27rpx;
+}
+
+.step-top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.step-top-time {
+  color: #737373;
+}
+
+.step-content {
+  display: flex;
+  margin-top: 20rpx;
+}
+
+.step-content image {
+  width: 80rpx;
+  height: 80rpx;
+}
+
+.step-content-right {
+  height: 80rpx;
+  margin-left: 10rpx;
+}
+
+.step-content-top {
+  color: rgb(16, 142, 233);
+  height: 35rpx;
+  line-height: 35rpx;
+}
+
+.step-content-bottom {
+  color: #737373;
+  margin-top: 10rpx;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+  height: 35rpx;
+  line-height: 35rpx;
+  width: 550rpx;
 }
 
 /* 广告 */

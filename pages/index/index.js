@@ -141,11 +141,6 @@ Page({
         url: '/pages/goodsDetail/goodsDetail'
       })
   },
-  toStaps(){
-    my.navigateTo({
-        url: '/pages/logistics/logistics'
-      })
-  },
   toSearch() {
     my.navigateTo({
         url: '/pages/search/search'

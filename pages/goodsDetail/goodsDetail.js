@@ -54,7 +54,7 @@ Page({
         title: '参数'
       },
       { 
-        title: '租赁流程'
+        title: '评论'
       },
       { 
         title: '预订须知'
@@ -63,6 +63,7 @@ Page({
     activeTab: 0, // 当前激活tab索引
     showPricePopup: false, // 消费弹出菜单是否显示
     showTypePopup: false, // 种类弹出窗菜单是否显示
+    showCouponPopup: false, // 优惠券弹出菜单是否显示
     company: {
       logo: '../../image/companyLogo.png',
       name: '阿里巴巴集团有限公司',
@@ -85,11 +86,31 @@ Page({
         }
       ]
     },
+    couponList: [ // 优惠券列表
+      {
+        money: '120'
+      },{
+        money: '120'
+      },{
+        money: '120'
+      },{
+        money: '120'
+      },{
+        money: '120'
+      },{
+        money: '120'
+      },{
+        money: '120'
+      }
+    ],
     current: 1, // 轮播的角标
     typeList: ['32g银灰色','64g银色','128g深灰色','32g银灰色','64g银色','128g深灰色','32g银灰色','64g银色','128g深灰色'],
     timeList: ['七天','1个月','3个月','6个月','1年','2年','3年以上'],
     leaseNum: 1, // 租赁数量
     showCalendar: false, // 显示日历
+    showExplainContent1: false, // 显示免押额度
+    showExplainContent2: false, // 显示续租
+    showExplainContent3: false, // 显示买断
   },
   onLoad() {},
   handleTabClick({ index }) { // tab 上面标题点击
@@ -108,6 +129,16 @@ Page({
       showPricePopup: !this.data.showPricePopup
     })
   },
+  popupTypeClick() { // 显示/关闭 弹窗
+    this.setData({
+      showTypePopup: !this.data.showTypePopup
+    })
+  },
+  popupCouponClick() { // 显示/关闭 优惠券弹窗
+    this.setData({
+      showCouponPopup: !this.data.showCouponPopup
+    })
+  },
   swiperChange(e) {
     this.setData({
       current: e.detail.current + 1
@@ -117,11 +148,6 @@ Page({
     my.navigateTo({
         url: '/pages/evaluate/evaluate'
       })
-  },
-  popupTypeClick() {
-    this.setData({
-      showTypePopup: !this.data.showTypePopup
-    })
   },
   addBtn() {
     this.setData({
@@ -146,9 +172,32 @@ Page({
       url: '/pages/store/store'
     });
   },
-  toAfterSale() {
+  toAfterSale() { // 去售后细则
     my.navigateTo({
       url: '/pages/afterSale/afterSale'
     });
+  },
+  explainClick(e) {
+    let idx = e.target.dataset.idx
+    switch(idx) {
+      case '1': 
+        this.setData({
+          showExplainContent1: !this.data.showExplainContent1
+        });
+      break;
+      case '2': 
+        this.setData({
+          showExplainContent2: !this.data.showExplainContent2
+        });
+      break;
+      case '3': 
+        this.setData({
+          showExplainContent3: !this.data.showExplainContent3
+        });
+      break;
+      default:
+      break;
+    }
+    
   }
 });

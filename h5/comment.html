@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+		<title>发表评论</title>
+		<link rel="stylesheet" href="css/main.css">
+		<link rel="stylesheet" href="css/comment.css">
+		<link href="css/mui.min.css" rel="stylesheet" />
+	</head>
+	<body>
+		<script type="text/javascript" src="https://appx/web-view.min.js"></script>
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script src="js/mui.min.js"></script>
+		<div class="comment">
+		  <div class="top">
+			<img class="goods-img" mode="scaleToFill" src="image/test01.png"/>
+			<div class="check-type">
+			  <div class="good-F" onclick="faceClick('good')">
+				<img mode="scaleToFill" src="image/evaluate1_F.png"/>
+				<div class="false-title">好评</div>
+			  </div>
+			  <div class="good-T" onclick="faceClick('good')">
+				<img mode="scaleToFill" src="image/evaluate1_T.png"/>
+				<div class="true-title">好评</div>
+			  </div>
+			  <div class="mid-F" onclick="faceClick('mid')">
+				<img mode="scaleToFill" src="image/evaluate2_F.png"/>
+				<div class="false-title">中评</div>
+			  </div>
+			  <div class="mid-T" onclick="faceClick('mid')">
+				<img mode="scaleToFill" src="image/evaluate2_T.png"/>
+				<div class="true-title">中评</div>
+			  </div>
+			  <div class="low-F" onclick="faceClick('low')">
+				<img mode="scaleToFill" src="image/evaluate3_F.png"/>
+				<div class="false-title">差评</div>
+			  </div>
+			  <div class="low-T" onclick="faceClick('low')">
+				<img mode="scaleToFill" src="image/evaluate3_T.png"/>
+				<div class="true-title">差评</div>
+			  </div>
+			</div>
+		  </div>
+		  <div class="comment-content">
+			<div class="mui-input-row">
+				<textarea class="textArea" rows="8" placeholder="租品满足您的期待吗？说说它的优点和美中不足的地方吧..."></textarea>
+			</div>
+			<div class="textArea-bottom" id= 'doMedia'>
+				<div class="addPicture" onclick="addPicture()">
+				  <img mode="scaleToFill" src="image/picture.png"/>
+				  <div class="picture-title" id="addPicTitle">添加图片</div>
+				</div>
+				<div id="addVideo" onclick="addVideo()">
+				  <img mode="scaleToFill" src="image/video.png"/>
+				  <div class="picture-title">添加视频</div>
+				</div>
+			</div>
+		  </div>
+		  <div class="after-text">
+			<div class="after-text-left" onclick="doNM()">
+			  <img class="anonymous-F" src="image/unselected.png" />
+			  <img class="anonymous-T" src="image/right.png" />
+			  <div class="after-text-left-title">匿名</div>
+			</div>
+			<div class="after-text-right">
+			  公开的评价会帮助更多的人哦
+			</div>
+		  </div>
+		  <div class="comment-bottom">
+			<div class="bottom-title">
+			  店铺评价
+			</div>
+			<div class="check">
+			  <div class="title">描述相符</div>
+			  <div class="check-content">
+				<img class="checkImg1-1" mode="scaleToFill" onclick="checkClick1('1')" src="image/star_F.png"/>
+				<img class="checkImg1-2" mode="scaleToFill" onclick="checkClick1('1')" src="image/star_T.png"/>
+				<img class="checkImg1-3" mode="scaleToFill" onclick="checkClick1('2')" src="image/star_F.png"/>
+				<img class="checkImg1-4" mode="scaleToFill" onclick="checkClick1('2')" src="image/star_T.png"/>
+				<img class="checkImg1-5" mode="scaleToFill" onclick="checkClick1('3')" src="image/star_F.png"/>
+				<img class="checkImg1-6" mode="scaleToFill" onclick="checkClick1('3')" src="image/star_T.png"/>
+				<img class="checkImg1-7" mode="scaleToFill" onclick="checkClick1('4')" src="image/star_F.png"/>
+				<img class="checkImg1-8" mode="scaleToFill" onclick="checkClick1('4')" src="image/star_T.png"/>
+				<img class="checkImg1-9" mode="scaleToFill" onclick="checkClick1('5')" src="image/star_F.png"/>
+				<img class="checkImg1-10" mode="scaleToFill" onclick="checkClick1('5')" src="image/star_T.png"/>
+			  </div>
+			  <div class="check-tips1"></div>
+			</div>
+			<div class="check">
+			  <div class="title">物流服务</div>
+			  <div class="check-content">
+				<img class="checkImg2-1" mode="scaleToFill" onclick="checkClick2('1')" src="image/star_F.png"/>
+				<img class="checkImg2-2" mode="scaleToFill" onclick="checkClick2('1')" src="image/star_T.png"/>
+				<img class="checkImg2-3" mode="scaleToFill" onclick="checkClick2('2')" src="image/star_F.png"/>
+				<img class="checkImg2-4" mode="scaleToFill" onclick="checkClick2('2')" src="image/star_T.png"/>
+				<img class="checkImg2-5" mode="scaleToFill" onclick="checkClick2('3')" src="image/star_F.png"/>
+				<img class="checkImg2-6" mode="scaleToFill" onclick="checkClick2('3')" src="image/star_T.png"/>
+				<img class="checkImg2-7" mode="scaleToFill" onclick="checkClick2('4')" src="image/star_F.png"/>
+				<img class="checkImg2-8" mode="scaleToFill" onclick="checkClick2('4')" src="image/star_T.png"/>
+				<img class="checkImg2-9" mode="scaleToFill" onclick="checkClick2('5')" src="image/star_F.png"/>
+				<img class="checkImg2-10" mode="scaleToFill" onclick="checkClick2('5')" src="image/star_T.png"/>
+			  </div>
+			  <div class="check-tips2"></div>
+			</div>
+			<div class="check">
+			  <div class="title">服务态度</div>
+			  <div class="check-content">
+				<img class="checkImg3-1" mode="scaleToFill" onclick="checkClick3('1')" src="image/star_F.png"/>
+				<img class="checkImg3-2" mode="scaleToFill" onclick="checkClick3('1')" src="image/star_T.png"/>
+				<img class="checkImg3-3" mode="scaleToFill" onclick="checkClick3('2')" src="image/star_F.png"/>
+				<img class="checkImg3-4" mode="scaleToFill" onclick="checkClick3('2')" src="image/star_T.png"/>
+				<img class="checkImg3-5" mode="scaleToFill" onclick="checkClick3('3')" src="image/star_F.png"/>
+				<img class="checkImg3-6" mode="scaleToFill" onclick="checkClick3('3')" src="image/star_T.png"/>
+				<img class="checkImg3-7" mode="scaleToFill" onclick="checkClick3('4')" src="image/star_F.png"/>
+				<img class="checkImg3-8" mode="scaleToFill" onclick="checkClick3('4')" src="image/star_T.png"/>
+				<img class="checkImg3-9" mode="scaleToFill" onclick="checkClick3('5')" src="image/star_F.png"/>
+				<img class="checkImg3-10" mode="scaleToFill" onclick="checkClick3('5')" src="image/star_T.png"/>
+			  </div>
+			  <div class="check-tips3"></div>
+			</div>
+		  </div>
+		  <div class="action-btn">
+			  发布
+		  </div>
+		</div>
+	</body>
+	<script>
+		$('.good-T').hide();
+		$('.mid-T').hide();
+		$('.low-T').hide();
+		$('.anonymous-T').hide();
+		$('.checkImg1-2').hide();
+		$('.checkImg1-4').hide();
+		$('.checkImg1-6').hide();
+		$('.checkImg1-8').hide();
+		$('.checkImg1-10').hide();
+		$('.checkImg2-2').hide();
+		$('.checkImg2-4').hide();
+		$('.checkImg2-6').hide();
+		$('.checkImg2-8').hide();
+		$('.checkImg2-10').hide();
+		$('.checkImg3-2').hide();
+		$('.checkImg3-4').hide();
+		$('.checkImg3-6').hide();
+		$('.checkImg3-8').hide();
+		$('.checkImg3-10').hide();
+		var checkNM = false
+	</script>
+	
+	<script>
+		mui.init();
+		mui.plusReady(function(){ // 页面的一个啥生命周期
+			
+		});
+		
+	</script>
+	
+	<script> // 视频全屏
+		var self = plus.webview.currentWebview();
+		self.setStyle({
+			videoFullscreen: 'landscape'
+		});
+	</script>
+	<script type="text/javascript" src="js/comment.js"></script>
+</html>

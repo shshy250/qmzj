@@ -1,6 +1,6 @@
 Page({
   data: {
-    transportCode: 123456789,
+    transportCode: '123456789',
     activeIndex: 1,
     items: [{
       title: '货物已由本人签收，感谢您选择京东物流！',
@@ -24,7 +24,7 @@ Page({
   },
   doCopy() {
     my.setClipboard({
-      text: this.data.orderCode,
+      text: this.data.transportCode,
       success: () => {
         my.showToast({
           type: 'none',

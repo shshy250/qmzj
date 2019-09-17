@@ -7,6 +7,10 @@
   display: none;
 }
 
+.am-popup-mask {
+  z-index: 90!important;
+}
+
 .pageBottom-pop .am-popup-mask { /*使弹出窗蒙版透明*/
   background-color: transparent!important;
 }
@@ -98,6 +102,19 @@
   margin-top: 25rpx;
 }
 
+.coupon {
+  background: url(../../image/yhq_A.png) no-repeat 0 0;
+  background-size: 100% 100%;
+  width: 150rpx;
+  padding: 0 15rpx;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+  font-size: 22rpx;
+  line-height: 60rpx;
+  height: 60rpx;
+}
+
 .AD {
   margin-top: 25rpx;
   width: 100%;
@@ -168,16 +185,13 @@
 }
 
 .ad-bottom {
-  width: 300rpx;
+  width: 100rpx;
   margin-top: 50rpx;
   height: 30rpx;
   line-height: 30rpx;
-  display: flex;
   color: rgb(16, 142, 233);
-  justify-content: space-around;
-  margin-left: 230rpx;
+  margin-left: 330rpx;
   font-size: 16rpx;
-  background: linear-gradient(to right, #f6f6f6 , #fff , #f6f6f6); /* 渐变 */
   z-index: 5;
   position: relative;
 }
@@ -202,6 +216,50 @@
   border-radius: 10rpx;
   color: #fff;
   background-color: #ff7800;
+}
+
+.explain-all {
+  background-color: #fff;
+  width: calc(100% - 40rpx);
+  padding: 20rpx;
+}
+
+.explain-top-title {
+  font-weight: bold;
+}
+
+.explain-top-content {
+  width: 100%;
+  margin: 20rpx 0;
+}
+
+.explain-every {
+  font-size: 30rpx;
+  width: 100%;
+  border-bottom: 1rpx solid #e6e6e6;
+  display: flex;
+  justify-content: space-between;
+  height: 100rpx;
+  line-height: 100rpx;
+}
+
+.every-content {
+  margin: 20rpx 0;
+  width: 100%;
+}
+
+.explain-left {
+  margin: auto 0 ;
+  line-height: 30rpx;
+}
+
+.explain-left-top {
+}
+
+.explain-left-bottom {
+  margin-top: 10rpx;
+  font-size: 20rpx;
+  color: #737373;
 }
 
 .evaluate {
@@ -328,42 +386,6 @@
 
 .cpu, .memory, .hdd, .gpu {
   border-bottom: 1rpx solid #e6e6e6;
-}
-
-.process {
-  padding: 80rpx 50rpx 0 50rpx;
-  display: flex;
-  justify-content: space-between;
-  height: 120rpx;
-}
-
-.process-content {
-  width: 120rpx;
-  height: 120rpx;
-}
-
-.processIcon {
-  margin: auto 0;
-  width: 30rpx;
-  height: 30rpx;
-}
-
-.process-name {
-  padding: 30rpx 50rpx;
-  height: 30rpx;
-  line-height: 30rpx;
-  font-size: 28rpx;
-  text-align: center;
-  display: flex;
-  justify-content: space-between;
-}
-
-.process-name-content {
-  width: 120rpx;
-}
-
-.process-name-none {
-  width: 30rpx;
 }
 
 .tab-scroll {
@@ -518,6 +540,7 @@
 .popTypeScroll {
   height: 100%;
   width: 100%;
+  margin-bottom: 120rpx;
 }
 
 .pop-top {
@@ -676,4 +699,82 @@
   text-align: center;
   height: 40rpx;
   line-height: 40rpx;
+}
+
+/*优惠券 部分使用type prop*/
+.pop-coupon-top-left {
+  line-height: 30px;
+}
+
+.coupon-top-bottom {
+  margin-top: 20rpx;
+  height: 30rpx;
+  line-height: 30rpx;
+  font-size: 25rpx;
+  color: #737373;
+  display: flex;
+  justify-content: space-between;
+}
+
+.coupon-top-bottom-right {
+  display: flex;
+}
+
+.popCouponScroll {
+  width: 100%;
+  height: calc(100% - 65rpx - 30px);
+}
+
+.coupon-every {
+  margin-top: 30rpx;
+  color: red;
+  width: calc(100% - 60rpx);
+  height: 200rpx;
+  background: url(../../image/yhq_B.png) no-repeat 0 0;
+  background-size: 100% 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 30rpx;
+  font-size: 30rpx;
+}
+
+.coupon-left {
+  margin: auto 0;
+  text-align: center;
+}
+
+.coupon-left-top {
+  font-size: 25rpx;
+}
+
+.coupon-left-top-money {
+  font-size: 50rpx;
+}
+
+.coupon-left-bottom {
+  margin-top: 25rpx;
+}
+
+.coupon-middle {
+  margin: auto 0;
+}
+
+.coupon-middle-top {
+  font-size: 35rpx;
+}
+
+.coupon-middle-bottom {
+  margin-top: 25rpx;
+}
+
+.coupon-right {
+  margin: auto 0;
+  width: 150rpx;
+  height: 50rpx;
+  color: #fff;
+  background-color: red;
+  border-radius: 25rpx;
+  text-align: center;
+  line-height: 50rpx;
+  font-size: 25rpx;
 }

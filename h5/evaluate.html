@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>评论列表</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link href="css/evaluate.css" rel="stylesheet" />
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script type="text/javascript" src="https://appx/web-view.min.js"></script>
+	</head>
+	<body>
+		<div class="evaluate">
+			<div class="top">
+				<div class="top-left">
+					<div class="rightTitle">满意率</div>
+					<div class="rightContent">98</div>
+					<div class="rightRatio">%</div>
+				</div>
+			</div>
+			<div class="middle">
+				
+			</div>
+		</div>
+		
+		<!-- 引入模板引擎js -->
+		<script src='js/template-web.js'></script>
+		
+		<script type="text/html" id="evaluate-template">
+			{{each evaluateList as item i}}
+					<div class="every">
+						<div class="userMes">
+							<div class="userHeader">
+								<img src="{{item.userHeader}}" />
+							</div>
+							<div class="userName">{{item.userName}}</div>
+						</div>
+						<div class="evaluate-content">{{item.content}}</div>
+						{{if item.haveImg}}
+							<img class="evaluate-img" src="{{item.img}}" />
+							<img class="evaluate-img" src="{{item.img}}" />
+						{{/if}}
+						<div class="evaluate-goods">{{item.goods}}</div>
+					</div>
+			{{/each}}
+		</script>
+
+		<script type="text/javascript">
+			mui.init()
+			var evaluate = {
+				  num: 698,
+				  ratio: 98,
+				  evaluateList: [
+					{
+					  userHeader: 'image/touxiang.png',
+					  userName: 'test用户01',
+					  content: '用起来很舒服，文字文字文字文字文字，文字文字文字文字文字，文字文字文字文字文字，文字文字文字文字文字',
+					  goods: 'i5系列/16G内存/1T混合蚊子蚊子蚊子文字文字',
+					  img: 'image/test04.png',
+					  haveImg: true
+					},{
+					  userHeader: 'image/touxiang.png',
+					  userName: 'test用户02',
+					  content: '用起来也很舒服，文字文字文字文字文字，文字文字文字文字文字，文字文字文字文字文字，文字文字文字文字文字',
+					  goods: 'i5系列/16G内存/1T混合蚊子蚊子蚊子文字文字',
+					  haveImg: false
+					}
+				  ]
+			}
+			var html = template('evaluate-template', evaluate)
+			$('.middle').html(html)
+		</script>
+	</body>
+
+</html>

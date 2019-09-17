@@ -7,13 +7,15 @@
     "pages/goodsList/goodsList",
     "pages/goodsDetail/goodsDetail",
     "pages/evaluate/evaluate",
-    "pages/order/order",
+    "pages/orderList/orderList",
     "pages/search/search",
     "pages/store/store",
     "pages/logistics/logistics",
     "pages/orderDetail/orderDetail",
     "pages/categoryList/categoryList",
-    "pages/afterSale/afterSale"
+    "pages/afterSale/afterSale",
+    "pages/comment/comment",
+    "pages/order/order"
   ],
   "window": {
     "defaultTitle": "全民租机",
@@ -32,16 +34,16 @@
         "name": "首页"
       },
       {
-        "pagePath": "pages/cart/cart",
-        "icon": "image/cart.png",
-        "activeIcon": "image/cart_T.png",
-        "name": "购物车"
-      },
-      {
         "pagePath": "pages/category/category",
         "icon": "image/category.png",
         "activeIcon": "image/category_T.png",
         "name": "分类"
+      },
+      {
+        "pagePath": "pages/cart/cart",
+        "icon": "image/cart.png",
+        "activeIcon": "image/cart_T.png",
+        "name": "购物车"
       },
       {
         "pagePath": "pages/me/me",

@@ -15,7 +15,7 @@
       <view class="status">
         <view class="top-right-title">运单编号：</view>
         <view class="top-right-content code-content">
-          <view class="code">jaggd3113515</view>
+          <view class="code">{{transportCode}}</view>
           <view class="copy-btn" onTap="doCopy">复制</view>
         </view>
       </view>
