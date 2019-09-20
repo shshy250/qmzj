@@ -199,5 +199,10 @@ Page({
       break;
     }
     
+  },
+  toOrder() {
+    my.navigateTo({
+      url: '/pages/order/order'
+    });
   }
 });

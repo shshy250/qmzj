@@ -1,5 +1,87 @@
 <view class="order">
   <view class="userMes">
-    
+      <view class="userMes-right">
+        <image mode="scaleToFill" src="../../image/address.png"/>
+        <view class="userMes-content">
+          <view class="userMes-content-top">
+            <view class="userMes-name">张三</view>
+            <view class="userMes-tel">136****8988</view>
+          </view>
+          <view class="userMes-content-bottom">
+            北京市海淀区中关村生命科技园
+          </view>
+        </view>
+      </view>
+      <am-icon class="arrowRightIcon" type="arrow-right" size='10' />
+  </view>
+  <view class="orderMes">
+    <view class="company">
+      广州智信科技有限公司
+    </view>
+    <view class="goodsMes">
+      <image mode="scaleToFill" src="../../image/test01.png"/>
+      <view class="goodsMes-right">
+        <view class="goodsMes-title">thinkPaid怎么怎么滴啥啥版本zizizizizizizizizizizizizizizizizi</view>
+        <view class="goodsMes-dec">I1000版本/内存无限/怎么怎么狠怎么怎么无敌zizizizizizizizizizi</view>
+        <view class="goodsMes-money">总租金：￥33075.20</view>
+      </view>
+    </view>
+    <view class="moneyType">
+      <view class="moneyType-left">
+        随租随换6个月 1899.00元/月
+      </view>
+      <am-icon class="moneyTypeIcon" type="help-o" size='15' />
+    </view>
+    <view class="moneyContent">
+      <view class="moneyContent-item">
+        <view class="moneyContent-title">优惠券</view>
+        <view class="moneyContent-price">-￥0.00</view>
+      </view>
+      <view class="moneyContent-item">
+        <view class="moneyContent-title">月租金</view>
+        <view class="moneyContent-price">￥209.00</view>
+      </view>
+      <view class="moneyContent-item">
+        <view class="moneyContent-title">需支付押金</view>
+        <view class="moneyContent-price">￥2866.00</view>
+      </view>
+      <view class="moneyContent-tips">(提交订单后，基于您的信用将免除<text class="color-red">￥0-2866.00</text>押金)</view>
+      <view class="moneyContent-item">
+        <view class="moneyContent-title">应付总金额</view>
+        <view class="moneyContent-price color-red">￥2866.00</view>
+      </view>
+    </view>
+  </view>
+  <view class="orderTime">
+    <view class="moneyContent-item">
+        <view class="moneyContent-title">运费</view>
+        <view class="moneyContent-price">到付</view>
+    </view>
+    <view class="moneyContent-item">
+        <view class="moneyContent-title">租赁时间</view>
+        <view class="moneyContent-price">20190101-20190202</view>
+    </view>
+    <view class="moneyContent-item">
+        <view class="moneyContent-title">还款日期</view>
+        <view class="moneyContent-price">每月23号</view>
+    </view>
+    <view class="moneyContent-tips">(剩余租金每月23日前还清)</view>
+  </view>
+  <view class="leaveMes">
+    <view class="leaveMes-title">我要留言：</view>
+    <input class="input" focus="{{false}}" />
+  </view>
+  <view class="ps">
+    <am-icon class="psIcon" type="{{readme}}" color="rgb(16, 142, 233)" size='15' onTap="readmeClick" />
+    <view class="margin-left">我已阅读并接受</view>
+    <view class="margin-left color-blue">《售后细则》</view>
+  </view>
+  <view class="page-bottom">
+    <view class="bottom-left">
+      需要支付:<text class="color-red">￥209.00</text>
+    </view>
+    <view class="bottom-right">
+      信用授权支付
+    </view>
   </view>
 </view>

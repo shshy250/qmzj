@@ -279,7 +279,7 @@
     </view>
     <view class="bottom-option">
       <view class="cart">加入购物车</view>
-      <view class="buy">立即租赁</view>
+      <view class="buy" onTap="toOrder">立即租赁</view>
     </view>
   </view>
 
@@ -340,7 +340,7 @@
           </block>
         </view>
         <view class="timeSelect">
-          <view class="timeSelect-title">选择时长</view>
+          <view class="timeSelect-title">选择租期</view>
         </view>
         <view class="timeSelect-content">
           <block a:for="{{timeList}}">

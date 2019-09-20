@@ -15,7 +15,10 @@
     "pages/categoryList/categoryList",
     "pages/afterSale/afterSale",
     "pages/comment/comment",
-    "pages/order/order"
+    "pages/order/order",
+    "pages/addressList/addressList",
+    "pages/addressOption/addressOption",
+    "pages/couponList/couponList"
   ],
   "window": {
     "defaultTitle": "全民租机",

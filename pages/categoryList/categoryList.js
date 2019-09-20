@@ -63,5 +63,10 @@ Page({
     this.setData({
       activeIndex: index
     });
+  },
+  toSearch() {
+    my.navigateTo({
+      url: '/pages/search/search'
+    });
   }
 });

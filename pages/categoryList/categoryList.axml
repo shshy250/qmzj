@@ -9,7 +9,7 @@
         <view class="ydsb" data-id="5" style="{{activeIndex == 5 ? 'font-weight: bold' : 'font-weight: normal'}}" onTap="tabClick">移动设备</view>
         <view class="smyl" data-id="6" style="{{activeIndex == 6 ? 'font-weight: bold' : 'font-weight: normal'}}" onTap="tabClick">数码娱乐</view>
       </scroll-view>
-      <image class="top-search" mode="scaleToFill" src="../../image/search_circle.png"/>
+      <image onTap="toSearch" class="top-search" mode="scaleToFill" src="../../image/search_circle.png"/>
     </view>
     <view class="top-choose">
       <view class="top-choose-new">全新</view>

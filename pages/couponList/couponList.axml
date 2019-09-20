@@ -1,0 +1,27 @@
+<view class="couponList">
+  <block a:for="{{couponList}}">
+    <view class="coupon-every">
+      <view class="coupon-left">
+        <view class="coupon-type">
+          平台券
+        </view>
+        <view class="coupon-content">
+          <image mode="scaleToFill" src="../../image/getCoupon.png"/>
+          <view class="coupon-content-right">
+            <view class="coupon-money">
+              ￥<text class="coupon-yh-money">{{item.money}}</text>满5999减380
+            </view>
+            <view class="coupon-tips">
+              <view>领券后15天内有效</view>
+              <view>所有商品可用</view>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class="coupon-right">
+        <view class="just-btn">立即领券</view>
+      </view>
+    </view>
+  </block>
+  <view class="page-bottom">别扯了 已经没有了</view>
+</view>

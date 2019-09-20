@@ -27,7 +27,7 @@
 
   <view class="toAddress" onTap="toAddress">
     <view>收货地址</view>
-    <am-icon type="arrow-right" size='10' />
+    <am-icon class="toAddressIcon" type="arrow-right" size='10' />
   </view>
 
   <view class="middle">
@@ -107,10 +107,6 @@
     <image mode="scaleToFill" src="../../image/me_AD.png"/>
   </view>
 
-  <view class="photo">
-    <image mode="scaleToFill" src="{{photoUrl}}"/>
-  </view>
-
   <view class="bottom">
     <view class="bottom-up">
       <view class="bill">
@@ -119,7 +115,7 @@
         </view>
         <view class="billName">账单</view>
       </view>
-      <view class="coupon">
+      <view class="coupon" onTap="toCoupon">
         <view class="control-b-Img">
           <image mode="scaleToFill" src="../../image/coupon.png"/>
         </view>

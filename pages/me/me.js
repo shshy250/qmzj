@@ -12,7 +12,7 @@ Page({
     });
   },
   toOrder(e) {
-    let status = e.target.dataset.status
+    let status = e.target.dataset.status;
     my.navigateTo({
       url: '/pages/orderList/orderList?status='+status
     });
@@ -33,18 +33,15 @@ Page({
 		// 			});
 		// 		}
 		// 	})
-    my.chooseVideo({
-      success: (res) => {
-					console.log(res)
-          this.setData({
-            photoUrl:res.apFilePath
-          });
-				}
-    })
   },
   toAddress() {
     my.navigateTo({
-      url: '/pages/order/order'
+      url: '/pages/addressList/addressList'
+    });
+  },
+  toCoupon() {
+    my.navigateTo({
+      url: '/pages/couponList/couponList'
     });
   }
 });
