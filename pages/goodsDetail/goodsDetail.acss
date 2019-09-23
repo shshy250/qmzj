@@ -85,7 +85,7 @@
   border: 1rpx solid red;
   margin: auto 5rpx;
   height: 27rpx;
-  line-height: 27rpx;
+  line-height: 30rpx;
 }
 
 .goods-title {
@@ -96,6 +96,30 @@
   padding: 25rpx;
   font-size: 30rpx;
   color: #737373;
+}
+
+.goods-tips {
+  margin-top: 25rpx;
+  background-color: #fff;
+  width: 100%;
+  display: flex;
+  font-size: 25rpx;
+}
+
+.goods-tips-left {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 30rpx;
+}
+
+.goods-tips-every {
+  display: flex;
+  margin-top: 30rpx;
+  margin-right: 20rpx;
+}
+
+.goods-tips-right {
+  margin: auto 10rpx;
 }
 
 .goodsCheck {
@@ -623,6 +647,7 @@
   overflow: hidden;
   line-height: 50rpx;
   height: 50rpx;
+  width: 120rpx;
   font-size: 26rpx;
   padding: 0 10rpx;
 }
@@ -777,4 +802,32 @@
   text-align: center;
   line-height: 50rpx;
   font-size: 25rpx;
+}
+
+/*goods-tips-pop*/
+.popup-tips-content {
+  background-color: #fff;
+  font-size: 30rpx;
+}
+
+.popup-tips-title {
+  width: 100%;
+  text-align: center;
+  padding-top: 30rpx;
+}
+
+.popup-tips-item {
+  margin-top: 30rpx;
+  margin-left: 30rpx;
+
+}
+
+.popup-tips-item-title {
+  display: flex;
+}
+
+.popup-tips-item-content {
+  color: #737373;
+  margin-left: 15px;
+  margin-top: 15rpx;
 }

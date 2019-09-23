@@ -72,9 +72,11 @@
     <input class="input" focus="{{false}}" />
   </view>
   <view class="ps">
-    <am-icon class="psIcon" type="{{readme}}" color="rgb(16, 142, 233)" size='15' onTap="readmeClick" />
-    <view class="margin-left">我已阅读并接受</view>
-    <view class="margin-left color-blue">《售后细则》</view>
+    <view class="click" onTap="readmeClick">
+      <am-icon class="psIcon" type="{{readme}}" color="rgb(16, 142, 233)" size='15' />
+      <view class="margin-left">我已阅读并接受</view>
+    </view>
+    <view class="margin-left color-blue" onTap="toAfterSale">《售后细则》</view>
   </view>
   <view class="page-bottom">
     <view class="bottom-left">

@@ -17,5 +17,10 @@ Page({
       });
     }
     this.data.checkReadme = !this.data.checkReadme
+  },
+  toAfterSale() {
+    my.navigateTo({
+      url: '/pages/afterSale/afterSale'
+    });
   }
 });

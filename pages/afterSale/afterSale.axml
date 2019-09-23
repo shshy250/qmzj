@@ -89,5 +89,5 @@
     下单方（即客户）如违约则必须缴纳该服务方式违约服务条款中规定的违约费用方可退租。全新机如果原包装损坏、机器激活将不
 得进行退换货。
   </view>
-  <view class="bottom-btn">确定</view>
+  <view class="bottom-btn" onTap="toBack">确定</view>
 </view>

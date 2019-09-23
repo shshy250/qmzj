@@ -169,4 +169,17 @@
       </view>
     </view>
   </view>
+<!-- 没写样式呢？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？ -->
+  <modal show="{{modalServiceOpened}}" showClose="{{false}}" className="modalService"> 
+    <view class="modal-service-title">
+      联系客服
+    </view>
+    <view class="modal-service-tel">
+      平台客服：<text class="color-blue">13393356984</text>
+    </view>
+    <view class="modal-service-time">
+      工作时间：10:30-19:30
+    </view>
+    <view class="close-btn">取消拨打</view>
+	</modal>
 </view>

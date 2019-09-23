@@ -111,6 +111,12 @@ Page({
     showExplainContent1: false, // 显示免押额度
     showExplainContent2: false, // 显示续租
     showExplainContent3: false, // 显示买断
+    activeTypeIndex: '', // 用于定义选中样式
+    activeTimeIndex: '', // 用于定义选中样式
+    goodsTipsList: [
+      '芝麻信用免押金','正品保证','顺丰寄送','售后电话 133352265894'
+    ],
+    showTipsPopup: false, // 判断是否显示tips-pop
   },
   onLoad() {},
   handleTabClick({ index }) { // tab 上面标题点击
@@ -203,6 +209,28 @@ Page({
   toOrder() {
     my.navigateTo({
       url: '/pages/order/order'
+    });
+  },
+  itemTypeClick(e) {
+    let index = e.currentTarget.dataset.id
+    this.setData({
+      activeTypeIndex: index
+    });
+  },
+  itemTimeClick(e) {
+    let index = e.currentTarget.dataset.id
+    this.setData({
+      activeTimeIndex: index
+    });
+  },
+  toCoupon() {
+    my.navigateTo({
+      url: '/pages/couponList/couponList'
+    });
+  },
+  popupTipsClick() {
+    this.setData({
+      showTipsPopup: !this.data.showTipsPopup
     });
   }
 });

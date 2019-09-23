@@ -178,6 +178,10 @@ page {
   display: flex;
 }
 
+.click {
+  display: flex;
+}
+
 .psIcon {
   margin: auto 0;
 }
