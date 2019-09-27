@@ -18,10 +18,6 @@
         <view class="totalAmountName">总额度</view>
         <view class="totalNum">0</view>
       </view>
-      <view class="rzse">
-        <view class="rzseName">认证授额</view>
-        <view class="rzseType">获取免押金额</view>
-      </view>
     </view>
   </view>
 
@@ -103,7 +99,7 @@
     </view>
   </view>
 
-  <view class="me-ad" onTap="openCamera">
+  <view class="me-ad" onTap="toSettled">
     <image mode="scaleToFill" src="../../image/me_AD.png"/>
   </view>
 
@@ -141,7 +137,7 @@
         </view>
         <view class="invoiceName">发票</view>
       </view>
-      <view class="buyOut">
+      <view class="buyOut" onTap="toBuyOut">
         <view class="control-b-Img">
           <image mode="scaleToFill" src="../../image/buyOut.png"/>
         </view>
@@ -149,19 +145,19 @@
       </view>
     </view>
     <view class="bottom-bottom">
-      <view class="helpCenter">
+      <view class="helpCenter" onTap="toHelp">
         <view class="control-b-Img">
           <image mode="scaleToFill" src="../../image/helpCenter.png"/>
         </view>
         <view class="helpCenterName">帮助中心</view>
       </view>
-      <view class="feedBack">
+      <view class="feedBack" onTap="toFeedback">
         <view class="control-b-Img">
           <image mode="scaleToFill" src="../../image/feedBack.png"/>
         </view>
         <view class="feedBackName">意见反馈</view>
       </view>
-      <view class="customerService">
+      <view class="customerService" onTap="showService">
         <view class="control-b-Img">
           <image mode="scaleToFill" src="../../image/customerService.png"/>
         </view>
@@ -169,7 +165,7 @@
       </view>
     </view>
   </view>
-<!-- 没写样式呢？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？？ -->
+
   <modal show="{{modalServiceOpened}}" showClose="{{false}}" className="modalService"> 
     <view class="modal-service-title">
       联系客服
@@ -180,6 +176,6 @@
     <view class="modal-service-time">
       工作时间：10:30-19:30
     </view>
-    <view class="close-btn">取消拨打</view>
+    <view class="close-btn" onTap="showService">取消拨打</view>
 	</modal>
 </view>

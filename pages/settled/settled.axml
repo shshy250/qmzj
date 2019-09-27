@@ -1,0 +1,33 @@
+<view class="settled">
+  <view class="all-pic">
+    <view class="content">
+      <view class="input-div">
+        <input class="input" placeholder="请输入公司名称" />
+      </view>
+      <view class="input-div">
+        <input class="input" placeholder="请输入公司地址" />
+      </view>
+      <view class="input-div">
+        <input class="input" placeholder="请输入联系人" />
+      </view>
+      <view class="input-div">
+        <input class="input" placeholder="请输入联系人电话" />
+      </view>
+      <view class="input-div">
+        <input class="input" placeholder="请输入营业品类" />
+      </view>
+      <view class="radio-all">
+        <view class="radio-content">
+          <view class="content-title">线下实体店</view>
+          <switch onChange="switch2Change"/>
+        </view>
+        <view class="radio-content">
+          <view class="content-title">租赁二手商品</view>
+          <switch onChange="switch2Change"/>
+        </view>
+      </view>
+      <view class="save-btn">保存</view>
+      <view class="tips">*官方承诺您的信息将不会被泄露</view>
+    </view>
+  </view>
+</view> 

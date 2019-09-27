@@ -2,6 +2,22 @@ page {
   background-color: #fff;
 }
 
+.top-tabs {
+  display: flex;
+  width: 100%;
+  margin: 40rpx 0;
+}
+
+.tab-every {
+  width: 50%;
+  height: 50rpx;
+  font-weight: bold;
+  text-align: center;
+  font-size: 35rpx;
+  line-height: 50rpx;
+  border-bottom: 1rpx solid #e6e6e6;
+}
+
 .couponList {
   font-size: 25rpx;
 }

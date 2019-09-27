@@ -1,4 +1,8 @@
 <view class="couponList">
+  <view class="top-tabs">
+    <view class="tab-every" data-id="1" style="{{activeIndex == 1 ? 'color: rgb(16, 142, 233);border-bottom-color: rgb(16, 142, 233);' : ''}}" onTap="tabClick">我的优惠券</view>
+    <view class="tab-every" data-id="2" style="{{activeIndex == 2 ? 'color: rgb(16, 142, 233);border-bottom-color: rgb(16, 142, 233);' : ''}}" onTap="tabClick">领券中心</view>
+  </view>
   <block a:for="{{couponList}}">
     <view class="coupon-every">
       <view class="coupon-left">

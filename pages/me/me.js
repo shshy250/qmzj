@@ -1,7 +1,8 @@
 Page({
   data: {
     status: '运输中',
-    photoUrl: ''
+    photoUrl: '',
+    modalServiceOpened: false, // 显示客服
   },
   onLoad() {
     my.getLocation({ // 后期用
@@ -17,23 +18,6 @@ Page({
       url: '/pages/orderList/orderList?status='+status
     });
   },
-  openCamera() {
-    // my.chooseImage({
-		// 		sourceType: ['camera', 'album'],
-		// 		count: 1,
-		// 		success: (res) => {
-		// 			console.log(res)
-    //       this.setData({
-    //         photoUrl:res.apFilePaths[0]
-    //       });
-		// 		},
-		// 		fail: () => {
-		// 			my.showToast({
-		// 				content: 'fail', // 文字内容
-		// 			});
-		// 		}
-		// 	})
-  },
   toAddress() {
     my.navigateTo({
       url: '/pages/addressList/addressList'
@@ -42,6 +26,32 @@ Page({
   toCoupon() {
     my.navigateTo({
       url: '/pages/couponList/couponList'
+    });
+  },
+  showService() {
+    this.setData({
+      modalServiceOpened: !this.data.modalServiceOpened
+    });
+  },
+  toHelp() {
+    my.navigateTo({
+      url: '/pages/helpme/helpme'
+    });
+  },
+  toFeedback() {
+    my.navigateTo({
+      url: '/pages/feedback/feedback'
+    });
+  },
+  toBuyOut() {
+    console.log('go')
+    my.navigateTo({
+      url: '/pages/buyOut/buyOut'
+    });
+  },
+  toSettled() {
+    my.navigateTo({
+      url: '/pages/settled/settled'
     });
   }
 });

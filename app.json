@@ -18,7 +18,11 @@
     "pages/order/order",
     "pages/addressList/addressList",
     "pages/addressOption/addressOption",
-    "pages/couponList/couponList"
+    "pages/couponList/couponList",
+    "pages/helpme/helpme",
+    "pages/feedback/feedback",
+    "pages/buyOut/buyOut",
+    "pages/settled/settled"
   ],
   "window": {
     "defaultTitle": "全民租机",
