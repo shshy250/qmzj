@@ -53,5 +53,10 @@ Page({
     my.navigateTo({
       url: '/pages/settled/settled'
     });
+  },
+  toBill() {
+    my.navigateTo({
+      url: '/pages/bill/bill'
+    });
   }
 });
