@@ -1,29 +1,27 @@
 <template>
 	<div class="increment">
-		<div class="addIncrement">添加增值服务</div>
-		<div v-if="!showEmpty" class="table-content">
-			<el-table :data="tableData" border :header-cell-style="{'background-color':'#c5deff',}" style="width: 100%">
-				<el-table-column prop="name" label="名称">
-				</el-table-column>
-				<el-table-column prop="price" label="价格">
-				</el-table-column>
-				<el-table-column prop="content" label="内容">
-				</el-table-column>
-				<el-table-column prop="status" label="状态">
-				</el-table-column>
-				<el-table-column prop="options" label="操作">
-					<template slot-scope="scope">
-						<div class="tableDetail" @click="toDetail(scope.$index, scope.row)">详情</div>
+			<div class="addIncrement">添加增值服务</div>
+			<div class="table-content">
+				<el-table :data="tableData" border :header-cell-style="{'background-color':'#f8f8f8',}" style="width: 100%">
+					<template slot="empty">
+					    <img class="empty-icon" src="../../icons/tableNothing.png" alt srcset />
+					    <p>暂无数据</p>
 					</template>
-				</el-table-column>
-			</el-table>
-		</div>
-		<div v-if="showEmpty" class="empty-content">
-			<div class="empty-content-all">
-				<img src="../../icons/tableNothing.png" />
-				<div class="empty-content-title">暂无数据</div>
+					<el-table-column prop="name" label="名称">
+					</el-table-column>
+					<el-table-column prop="price" label="价格">
+					</el-table-column>
+					<el-table-column prop="content" label="内容">
+					</el-table-column>
+					<el-table-column prop="status" label="状态">
+					</el-table-column>
+					<el-table-column prop="options" label="操作">
+						<template slot-scope="scope">
+							<div class="tableDetail" @click="toDetail(scope.$index, scope.row)">详情</div>
+						</template>
+					</el-table-column>
+				</el-table>
 			</div>
-		</div>
 	</div>
 </template>
 
@@ -64,7 +62,6 @@
 <style scoped>
 	.increment {
 		width: 100%;
-		height: 100%;
 		padding: 20px;
 	}
 	.addIncrement {

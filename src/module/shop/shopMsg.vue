@@ -1,10 +1,8 @@
 <template>
 	<div class="shopMsg">
 		<div class="top-tabs">
-			<div v-if="!showItemContent" class="tabs-every" @click="changeType('1')">店铺信息</div>
-			<div v-if="!showItemContent" class="tabs-active" @click="changeType('2')">企业信息</div>
-			<div v-if="showItemContent" class="tabs-active" @click="changeType('1')">店铺信息</div>
-			<div v-if="showItemContent" class="tabs-every" @click="changeType('2')">企业信息</div>
+			<div :class="[showItemContent?'tabs-active':'tabs-every']" @click="changeType('1')">店铺信息</div>
+			<div :class="[!showItemContent?'tabs-active':'tabs-every']" @click="changeType('2')">企业信息</div>
 		</div>
 		<div class="contentAll">
 			<div v-if="showItemContent" class="content-shop">
@@ -132,6 +130,7 @@
 				console.log(file, fileList);
 			},
 			handlePictureCardPreview(file) {
+				console.log()
 				this.dialogImageUrl = file.url;
 				this.dialogVisible = true;
 			},
@@ -150,48 +149,44 @@
 <style scoped>
 	.shopMsg {
 		width: 100%;
-		height: 100%;
 		padding: 20px;
+		background-color: #f2f2f2;
 	}
 	.top-tabs {
 		display: flex;
-		color: #ffffff;
 		position: relative;
+		font-size: 12px;
 	}
 	.tabs-every {
-		margin-top: 5px;
-		width: 40px;
-		height: 20px;
-		background-color: #82848A;
-		border-top-left-radius: 5px;
-		border-top-right-radius: 5px;
+		width: 70px;
 		text-align: center;
-		line-height: 20px;
-		font-size: 5px;
-		margin-right: 2px;
+		line-height: 25px;
+		color: #737373;
+		margin-right: 10px;
+		cursor:pointer;
 	}
 	.tabs-active {
-		width: 50px;
-		height: 25px;
-		background-color: #409EFF;
-		border-top-left-radius: 6px;
-		border-top-right-radius: 6px;
+		width: 70px;
 		text-align: center;
-		line-height: 20px;
-		font-size: 10px;
-		margin-right: 2px;
+		line-height: 25px;
+		color: #3a8dff;
+		border-bottom: 1px solid #3a8dff;
+		margin-right: 10px;
+		cursor:pointer;
 	}
 	.contentAll {
+		margin-top: 10px;
+		background-color: #FFFFFF;
 		border: 1px solid #eee;
-		height: calc(100% - 28px);
+		height: calc(100% - 36px);
 		overflow-y: auto;
 	}
 	.content-shop {
-		width: 300px;
+		width: 600px;
 		margin: 40px auto;
 	}
 	.content-company {
-		width: 300px;
+		width:600px;
 		margin: 40px auto;
 	}
 	.content-every {
@@ -201,6 +196,9 @@
 	}
 	.item-title {
 		width: 90px;
+	}
+	.item-content {
+		width: 510px;
 	}
 	.saveBtn {
 		background-color: #03be7f;
